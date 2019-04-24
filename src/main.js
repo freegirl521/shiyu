@@ -8,6 +8,7 @@ import Vuex from 'vuex';
 import store from './store'
 
 Vue.use(Vuex)
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 Vue.use(router)
