@@ -1,0 +1,254 @@
+
+header{
+	background: #fff;
+}
+.headerTop{
+	margin: 0 auto;
+	width: 1200px;
+	color:#DE1C31;
+	overflow: hidden;
+}
+.left{
+	float:left
+}
+.right{
+	float:right
+}
+.center{
+	width: 1200px;
+	margin: 0 auto;
+}
+.city{
+	position: relative;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 0 0 119px;
+	text-decoration: none;
+	z-index: 110;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.city span{
+	display: inline-block;
+max-width: 60px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+vertical-align: middle;
+}
+.map-info{
+	display: inline-block;
+	width: 30px;
+	height: 35px;
+	vertical-align: middle;
+	background-size: 12px auto;
+	/* background: url(../img/gps.png) no-repeat center; */
+}
+.r-info ul:after{
+	content:"";
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+header .r-info ul li{
+	list-style: none;
+	float:left;
+	height: 40px;
+	line-height: 40px;
+}
+header .r-info ul li a{
+	text-decoration: none;
+	color:#DE1C31;
+	padding-left: 16px;
+}
+section{
+	width: 100%;
+	min-width: 1190px;
+	padding: 9px 0 8px !important;
+	background-color: #fff;
+	font-size: 12px;
+}
+.logo-input{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo{
+	/* background:url(../img/Food%20Meet@2x.png) no-repeat; */
+    background-size: auto;
+	float: left;
+	width: 207px;
+	height: 103px;
+	background-size: 207px auto;
+}
+.search-bar{
+	position: relative;
+	float: left;
+	margin-left: 118px;
+	padding-top:29px
+}
+
+.search-container input{
+	
+	padding-top: 14px;
+	padding-bottom: 11px;
+	font-size: 16px;
+	box-sizing: content-box;
+	width: 536px;
+	height: 17px;
+	border: 2px solid #DE1C31;
+	text-indent: 55px;
+	outline: none;
+	border-radius: 3px 0 0 3px;
+	border-right: 0;
+	float: left;
+}
+.i-search{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	left:15px;
+	top: 40px;
+	/* background:url(../img/search.png) no-repeat; */
+}
+.search-btn{
+	display: inline-block;
+	position: relative;
+	left: -2px;
+	width: 250px;
+}
+.search-item{
+	display: inline-block;
+	padding: 9px 0;
+	height: 24px;
+	line-height: 24px;
+	width: 130px;
+	background-color: #DE1C31;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	box-sizing: content-box;
+	border: 2px solid #DE1C31;
+	border-left: none;
+	border-radius:0 3px 3px 0;
+}
+.hot-search{
+	padding-top: 9px;
+}
+
+.hot-search a{
+	color: #0b0b0b;
+}
+.search-word{
+	padding-left: 10px;
+}
+nav{
+	border-bottom: 2px solid #DE1C31;
+}
+.guide{
+	width: 1200px;
+	margin: 0 auto;
+	padding-left: 16px;
+}
+
+.guide>li{
+	float: left;
+	line-height: 34px;
+}
+.link{
+	width:210px;
+	height:34px;
+	line-height: 34px;
+	color: #FFFFFF;
+	font-size: 16px;
+	padding-left: 16px;
+	/* background:rgba(222,28,49,1) url(../img/down.png) no-repeat center; */
+	margin-right: 10px;
+	cursor: pointer;
+}
+.guide li a{
+	color: #DE1C31;
+	font-size: 16px;
+	padding-right: 29px;
+}
+.guide .link a{
+	color: #FFFFFF;
+}
+.index-title{
+	font-size: 16px;
+	color:#111;
+	width:70px;
+	font-weight: bold;
+	padding-right: 6px;
+	display: inline-block;
+}
+.index-item{
+	display: inline-block;
+	
+	font-size: 12px;
+	color:#3b3b3b;
+	padding-right: 13px;
+}
+.cate-nav{
+	width: 1200px;
+	margin: 0 auto;
+	padding-left: 16px;
+	display: none;
+}
+.nav-menu{
+	position: relative;
+	width: 210px;
+	padding-bottom: 15px;
+	box-shadow:0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+	background:rgba(253,253,253,1);
+	z-index: 1000;
+}
+.nav-menu li{
+	
+	position: relative;
+	height: 48px;
+	line-height: 48px;
+}
+.nav-menu li span{
+	padding-left: 16px;
+}
+.sec-container{
+	width: 240px;
+	position: absolute;
+	left:210px;
+	top:0;
+	overflow: hidden;
+	padding:6px 9px;
+	background:rgba(253,253,253,1);
+	border:1px solid rgba(238, 238, 238, 1);
+	display: none;
+}
+.sec-title{
+	font-size: 14px;
+	color: #111111;
+	height: 20px;
+	line-height: 20px;
+	border-bottom: 1px solid #DE1C31;
+	
+}
+.sec-item{
+	float: left;
+	width: 72px;
+	height: 30px;
+	line-height: 30px;
+	padding-right: 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+.sec-item a{
+	font-size:12px;
+	color: #8d8d8d;
+	font-weight: bold;
+}

@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import userReg from "../views/userReg.vue"
+import comment from "../views/comment.vue"
+import shopcenter from "../views/shopcenter.vue"
 
 Vue.use(Router)
 
@@ -19,6 +21,16 @@ export default new Router({
       path:"/userReg",
       name:"userReg",
       component:userReg
+    },
+    {
+      path:"/comment",
+      name:"comment",
+      component:comment
+    },
+    {
+      path:"/shopcenter",
+      name:"shopcenter",
+      component:shopcenter
     },
     {
       path: '/about',
