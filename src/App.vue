@@ -7,6 +7,15 @@
     <router-view/>
   </div>
 </template>
+<script>
+import "./assets/style/css/detail.css"
+import "./assets/style/css/font/iconfont.css"
+
+export default {
+  
+}
+</script>
+
 
 <style>
 #app {
