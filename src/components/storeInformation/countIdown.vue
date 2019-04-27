@@ -1,78 +1,37 @@
 <template>
-    <div>
-        <span :endTime="endTime" :callback="callback" :endText="endText"> 
-        <slot> 
-        {{content}} 
-        </slot> 
-        </span>
-    </div>
+   <div id="div" style="background-color:red;color:#000;fount-size:18px;height=20px">倒计时</div>
 </template>
 
 <script>
-     export default { 
-       name:"countIdown",
-  data(){ 
-   return { 
-   content: '', 
-   } 
-  }, 
-  props:{ 
-   endTime:{ 
-    type: String, 
-    default :''
-   }, 
-   endText:{ 
-    type : String, 
-    default:'已结束'
-   }, 
-   callback : { 
-    type : Function, 
-    default :''
-   } 
-  }, 
-  mounted () { 
-   this.countdowm(this.endTime) 
-  }, 
-  methods: { 
-   countdowm(timestamp){ 
-   let self = this; 
-   let timer = setInterval(function(){ 
-    let nowTime = new Date(); 
-    let endTime = new Date(timestamp * 1000); 
-    let t = endTime.getTime() - nowTime.getTime(); 
-    if(t>0){ 
-     let day = Math.floor(t/86400000); 
-     let hour=Math.floor((t/3600000)%24); 
-     let min=Math.floor((t/60000)%60); 
-     let sec=Math.floor((t/1000)%60); 
-     hour = hour < 10 ? "0" + hour : hour; 
-     min = min < 10 ? "0" + min : min; 
-     sec = sec < 10 ? "0" + sec : sec; 
-     let format = ''; 
-     if(day > 0){ 
-      format = `${day}天${hour}小时${min}分${sec}秒`; 
-     }  
-     if(day <= 0 && hour > 0 ){ 
-      format = `${hour}小时${min}分${sec}秒`;  
-     } 
-     if(day <= 0 && hour <= 0){ 
-      format =`${min}分${sec}秒`; 
-     } 
-     self.content = format; 
-     }else{ 
-      clearInterval(timer); 
-      self.content = self.endText; 
-      self._callback(); 
-     } 
-     },1000); 
-    }, 
-    _callback(){ 
-    if(this.callback && this.callback instanceof Function){ 
-      this.callback(...this); 
-     } 
-   } 
-  } 
- } 
+  export default { 
+       name:"countIdown"
+}
+</script>
+
+
+<script>
+  // window.onload=clock;
+function clock(){
+    var today=new Date(),//当前时间
+        h=today.getHours(),
+        m=today.getMinutes(),
+        s=today.getSeconds();
+      var stopTime=new Date("May 9 2019 00:00:00"),//结束时间
+        stopH=stopTime.getHours(),
+        stopM=stopTime.getMinutes(),
+        stopS=stopTime.getSeconds();
+      var shenyu=stopTime.getTime()-today.getTime(),//倒计时毫秒数
+        shengyuD=parseInt(shenyu/(60*60*24*1000)),//转换为天
+        D=parseInt(shenyu)-parseInt(shengyuD*60*60*24*1000),//除去天的毫秒数
+        shengyuH=parseInt(D/(60*60*1000)),//除去天的毫秒数转换成小时
+        H=D-shengyuH*60*60*1000,//除去天、小时的毫秒数
+        shengyuM=parseInt(H/(60*1000)),//除去天的毫秒数转换成分钟
+        M=H-shengyuM*60*1000;//除去天、小时、分的毫秒数
+        S=parseInt((shenyu-shengyuD*60*60*24*1000-shengyuH*60*60*1000-shengyuM*60*1000)/1000)//除去天、小时、分的毫秒数转化为秒
+        document.getElementById("div").innerHTML=(shengyuD+"天"+shengyuH+"小时"+shengyuM+"分"+S+"秒"+"<br>");
+        // setTimeout("clock()",500);
+        setTimeout(clock,500);
+}
 </script>
 
 <style lang="scss" scoped>

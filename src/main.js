@@ -15,6 +15,12 @@ Vue.use(router)
 Vue.use(ElementUI)
 Vue.prototype.$http= axios
 
+axios.interceptors.request.use(config=>{
+  config.url="http://10.9.62.240:8080"+config.url;
+  //config.url="/footmeet"+config.url;
+  return config;
+})
+
 new Vue({
   router,
   store,

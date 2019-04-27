@@ -1,19 +1,19 @@
 <template>
     <div>
-         <div class="right">
-                    <div class="resName">马可波罗西餐厅店</div>
-                    <div class="slogan ">仅售95元！价值100代金券一张，全场通用</div>
+         <div class="right" >
+                    <div class="resName">{{$store.state.storeInformation.succes.resName}}</div>
+                    <div class="slogan ">{{$store.state.storeInformation.succes.slogan}}</div>
                     <div class="prices">
-                        <div class="proPrices"><i>￥</i><span>95</span> </div>
-                        <div class="shopPrices">门店价 <i>￥</i><span>100</span> </div>
+                        <div class="proPrices"><i>￥</i><span>{{$store.state.storeInformation.succes.proPrices}}</span> </div>
+                        <div class="shopPrices">门店价 <i>￥</i><span>{{$store.state.storeInformation.succes.shopPrices}}</span> </div>
                     </div>
                     <div class="informtion">
                         <div class="soldNum">
-                            <div class="soldNumt">已售<span>1631</span></div>
+                            <div class="soldNumt">已售<span>{{$store.state.storeInformation.succes.soldNum}}</span></div>
                         </div>
                         <div class="evaNum">
                             <el-rate
-                                v-model="value"
+                                v-model="$store.state.storeInformation.succes.evaScore"
                                 disabled
                                 show-score
                                 :colors="['#DE1C31','#DE1C31','#DE1C31']"
@@ -21,7 +21,7 @@
                                 score-template="{value}">
                             </el-rate>
                             <div class="evaNums">
-                                <span>117</span>条团购评价
+                                <span>{{$store.state.storeInformation.succes.evaNum}}</span>条团购评价
                             </div>
                         </div>
                         <div class="evaScore">
@@ -56,9 +56,10 @@
         data(){
             return{
                 //星级评分
-                value: 3.7,
+                // value: 3.7,
                 //购买数量
-                num:1
+                num:1,
+                key:1
             }
             
         },
@@ -67,7 +68,7 @@
             handleChange(value) {
                 console.log(value);
             }
-        }
+        },
     }
 </script>
 

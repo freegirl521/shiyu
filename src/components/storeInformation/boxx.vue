@@ -19,53 +19,29 @@
                                 <li><img src="../../assets/img/store_information/timg (4).png"/></li>
                             </ul>
                         </div>
-                        <div class="listBottom">
-                            <div class="star">
-                                <ul>
-                                    <li @click="likeFun" v-show="!type"><img src="../../assets/img/store_information/星 拷贝 5@2x.png"><span>收藏</span></li>
-                                    <li @click="likeFun" v-show="type"><img src="../../assets/img/store_information/星 (1) 拷贝 5@2x.png"><span>已收藏</span></li>
-                                </ul>
-                            </div>
-                            <div class="share">
-                                <span>分享到</span>
-                                <i><img src="../../assets/img/store_information/箭头 (3)@2x.png"> </i>
-                                <ul class="soft">
-                                    <li><a title="分享到微博"></a>微博 </li>
-                                    <li><a title="分享到QQ空间"></a>QQ空间 </li>
-                                    <li><a title="分享到豆瓣"></a>豆瓣 </li>
-                                </ul>
-                            </div>
-                            <div class="er"></div>
-                            <div class="date">
-                                <!-- <template>
-                                    <countdown :endTime='endTime'></countdown>
-                                </template> -->
-                                <!-- <countIdown endTime="1590761620" :callback="callback" endText="已经结束了"></countIdown>  -->
-                                   
-                            </div>
-                        </div>
-                </div>
+                        
+        </div>
     </div>
 </template>
 
 <script>
     export default {
         name:"boxx",
-         data(){
-            return{
-                //收藏
-                isShow:true,
-                type:0,
-            }
-        },
-        methods: {
-            //收藏
-            likeFun(){
-              console.log(this)
-                this.type = !this.type
+        //  data(){
+        //     return{
+        //         //收藏
+        //         isShow:true,
+        //         type:0,
+        //     }
+        // },
+        // methods: {
+        //     //收藏
+        //     likeFun(){
+        //       console.log(this)
+        //         this.type = !this.type
                  
-            }
-        }
+        //     }
+        // }
     }
 </script>
 
@@ -184,7 +160,7 @@
                     indexCur = 0;
                 }
                 slide();
-            },3000)
+            },1500)
         }
         //21. 给大盒子添加移入移出事件
         oBigBox.onmouseenter = function(){
