@@ -1,0 +1,284 @@
+.r-info li a{
+	font-size: 12px;
+}
+.user-name{
+	display: inline-block;
+	line-height: 11px;
+	padding-right: 4px;
+	border-right: 1px solid #DE1C31;
+}
+
+.shop-center{
+	font-size:24px;
+	font-weight:300;
+	color:rgba(222,28,49,1);
+	
+}
+.contenttop_wrap{
+	background:rgba(255,255,255,1);
+}
+.header-content{
+	line-height: 118px;
+}
+.header-content img{
+	width: 205px;
+	vertical-align: middle;
+
+}
+.circle{
+	display: inline-block;
+	width:15px;
+	height:15px;
+	background:rgba(222,28,49,1);
+	border-radius:50%;
+	margin: 0 20px;
+}
+.user-img{
+	margin-top: 23px;
+}
+hgroup{
+	background: #F8F8F8;
+}
+.manage{
+	padding: 10px 20px;
+	width:230px;
+	height:58px;
+	color: #FFFFFF;
+	background:rgba(222,28,49,1);
+}
+.class-main{
+	width:190px;
+	height:822px;
+	padding:0 20px;
+	background:rgba(254,143,155,1);
+	position: relative;
+}
+.jian{
+	position: absolute;
+	right: 10px;
+	top:66px;
+}
+.shop-name {
+	color: #FFFFFF;
+	font-size: 18px;
+	line-height: 54px;
+}
+/*  */
+.shopcenter{
+	width: 1200px;
+	margin: 0 auto;
+	clear:both;
+
+	/* background: #FE8F9B !important; */
+}
+.manage{
+	float: left;
+}
+/* .shopcenter .title{
+	float: left;
+} */
+
+/* 选项卡 */
+
+.el-tabs{
+	width: 1200px;
+	margin: 0 auto;
+}
+.el-tabs--border-card{
+	border: none !important;
+}
+
+.el-tabs__header{
+	width:230px;
+	height:862px !important;
+	background:rgba(254,143,155,1) !important;
+	margin-right: 0 !important;
+	/* padding: 0 20px; */
+}
+.el-tabs__item{
+	text-align: left !important;
+	font-size:14px !important;
+	font-family:PingFangSC-Light !important;
+	color:rgba(255,254,254,1) !important;
+	line-height: 40px !important;
+	/* margin-left: 20px !important; */
+}
+.el-tabs__item span i img{
+	margin-right: 12px;
+}
+.is-active{
+	background:rgba(254,143,155,1) !important;
+	border: none !important;
+}
+.el-tabs__nav-prev,.el-tabs__nav-next{
+	display: none;
+}
+.el-tabs--left .el-tabs__nav-wrap.is-left {
+    margin-right: 0 !important;
+}
+#tab-0{
+	font-size: 18px !important;
+	margin: 8px 0;
+}
+#tab-5{
+	padding: 0 !important;
+	margin: 600px 0 0 0;
+}
+.el-tabs--border-card>.el-tabs__content{
+	padding: 0 !important;
+}
+
+
+.classify{
+	line-height: 40px;
+}
+.classify a{
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.classify span{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+	text-align: center;
+}
+.classify span img{
+	vertical-align: middle;
+	
+}
+.title{
+	height:60px;
+	background:rgba(254,143,155,1);
+}
+.title p{
+	padding: 17px 27px;
+	font-size: 18px;
+	margin-left: 230px;
+	color: #fff;
+	background:rgba(255,255,255,0.3);
+
+}
+.title img{
+	margin-left: 4px;
+}
+figcaption{
+	width: 970px;
+}
+.shop-wrap{
+	padding: 10px;
+	background: #fff;
+}
+.shop-content{
+	background: #F8F8F8;
+	padding: 0 10px;
+	overflow: hidden;
+}
+.content-class{
+	width:890px;
+	height:52px;
+	line-height: 52px;
+	padding-left: 35px;
+	color: #FFFFFF;
+	background:rgba(222,28,49,1);
+}
+.file{
+	opacity: 0;
+	font-size: 56px;
+	width: 180px;
+	height: 120px;
+}
+.food-info{
+	width: 180px;
+	height: 162px;
+	text-align: center;
+	padding-top: 20px;
+	overflow: hidden;
+	margin-right: 68px;
+	float: left;
+}
+input{ color: #ABABAB;font-size: 14px;}
+.food-name{
+	width: 178px;
+	display: block;
+	height: 40px;
+	text-align: center;
+	border:1px solid #DE1C31 !important;
+}
+.upPic{
+	width: 180px;
+	height: 120px;
+	position: relative;
+	background:url(../img/comment_shopcenter/white.png) no-repeat center #FE8F9B ;
+}
+.upPic:hover{
+	background:url(../img/comment_shopcenter/uppic.png) no-repeat center #FE8F9B ;
+}
+.del{
+	position: absolute;
+	right: 0;
+	top:0;
+	z-index:1000;
+}
+.coll{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.upPic img{
+	vertical-align: top;
+}
+
+.food-info p{
+	font-size:14px;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	line-height: 40px;
+	background: #FFFFFF;
+}
+.footer{
+	margin-top: 20px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+/* .footer span{
+	width:60px;
+	height:30px;
+	border:1px solid rgba(222,28,49,1);
+	border-radius:5px;
+	padding:9px 18px;
+	margin-right: 10px;
+	cursor: pointer;
+} */
+.footer i{
+	padding-right:11px
+}
+.page{
+	width:30px;
+	height:30px;
+	border:1px solid rgba(171,171,171,1);
+	border-radius:5px;
+	display:inline-block;
+	margin-right: 10px;
+	text-align: center;
+}
+.jump{
+	border: none;
+	background:rgba(254,143,155,1);
+}
+.more1{
+	width:230px;
+	height:50px;
+	background:rgba(222,28,49,1);
+	text-align: center;
+}
+.more1 img{
+	padding: 10px 13px;
+}
+
+/* 弹出编辑框 */
+.message-box{
+	width:513px;
+	height:517px;
+	background:rgba(255,255,255,1);
+}

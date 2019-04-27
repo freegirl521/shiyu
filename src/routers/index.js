@@ -1,7 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
-import userReg from "../views/userReg.vue"
+import userReg from "../views/register/userReg.vue"
+import userLogin from "../views/login/userLogin.vue"
+import shopLogin from "../views/login/shopLogin.vue"
+import findPwd from "../views/findpwd/findPwd.vue"
+import shopReg from "../views/register/shopReg.vue"
+import order1 from "../views/order/order1.vue"
+import order from "../views/order/order.vue"
+
 
 Vue.use(Router)
 
@@ -19,6 +26,36 @@ export default new Router({
       path:"/userReg",
       name:"userReg",
       component:userReg
+    },
+    {
+      path:"/userLogin",
+      name:"userLogin",
+      component:userLogin
+    },
+    {
+      path:"/shopLogin",
+      name:"shopLogin",
+      component:shopLogin
+    },
+    {
+      path:"/findPwd",
+      name:"findPwd",
+      component:findPwd
+    },
+    {
+      path:"/shopReg",
+      name:"shopReg",
+      component:shopReg
+    },
+    {
+      path:"/order1",
+      name:"order1",
+      component:order1
+    },
+    {
+      path:"/order",
+      name:"order",
+      component:order
     },
     {
       path: '/about',
