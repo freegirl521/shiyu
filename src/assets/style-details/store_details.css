@@ -1,0 +1,460 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    background: rgba(248,248,248,1);
+    font-size: 16px;
+   /* overflow: hidden;*/
+}
+i{
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.common_style{
+    padding-top: 12px;
+    width: 100%;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+body .shopHead{
+    
+    /* padding:1%; */
+    min-width: 510px;
+}
+body .infoCenter{
+    margin: 0 auto;
+    width: 1000px;
+}
+.clearfloat::after{
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+.shopHead .infoCenter h3{
+    padding-bottom: 1%;
+    font-size: 22px;
+    font-weight: normal;
+}
+.shopHead .infoCenter p{
+    padding-bottom: .5%;
+    padding-top: .5%;
+}
+.shopHead .infoCenter .shopScore{
+   padding-bottom: 1%;
+}
+.shopHead .infoCenter .shopScore div{
+    float: left;
+    margin-right:1%;
+}
+.shopHead .infoCenter .shopIco {
+    width: 130px;
+}
+/* .shopHead .infoCenter .shopIco img,.shopHead_right img{
+    display: inline;
+    width:20px;
+    margin-right: 5px;
+} */
+/**/ .shopHead .infoCenter .obclear{
+    clear: both;
+} 
+.shopHead .infoCenter .obclear .phone .tel{
+    margin-right: 20px;
+}
+.shopHead .infoCenter .obclear .special span{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+}
+.shopHead .infoCenter .obclear .special .tuan{
+    background:url("../img/store_details/tuan@2x.png") no-repeat left 0 bottom 0;
+}
+.shopHead .infoCenter .obclear .special .ding{
+    background:url("../img/store_details/tuan@2x.png") no-repeat right -30px bottom 0;
+}
+.shopHead .infoCenter .obclear .special .wai{
+    background:url("../img/store_details/tuan@2x.png") no-repeat right 0 bottom 0;
+}
+
+.shopHead .infoCenter .obclear details{
+    /* display: block; */
+    
+    margin-bottom: 10px;
+}
+.shopHead .infoCenter .obclear .openTime{
+    margin-bottom: 10px;
+    display: none;
+}
+.shopHead .infoCenter .shopHead_left{
+    float: left;
+}
+.shopHead .infoCenter .shopHead_left .write{
+    display: inline-block;
+    background: #DE1C31;
+    width: 96px;
+    height: 29px;
+    text-align: center;
+    line-height: 29px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 14px;
+}
+.shopHead .infoCenter .shopHead_left .book{
+    display: inline-block;
+    width: 226px;
+    height: 29px;
+    border: 1px #DE1C31 solid;
+    line-height: 29px;
+    border-radius: 5px;
+}
+.shopHead .infoCenter .shopHead_left .book img{
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.shopHead .infoCenter .shopHead_left .book i{
+    margin-left: 8px;
+}
+.shopHead .infoCenter .shopHead_right{
+    float: right;
+    margin-right: 50px;
+}
+.shopHead .infoCenter .shopHead_right img{
+    margin-right: 12px;
+}
+.sales{
+    height: 180px;
+   
+    /* padding:1%; */
+    margin-top: 20px;
+    color: #333333;
+}
+.sales .infoCenter h1{
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight:normal;
+}
+.sales .infoCenter .saleCoupon{
+    margin-right: 14px;
+}
+.sales .infoCenter .coupon .quanPic{
+    width: 156px;
+    height: 94px;
+    float: left;
+    /* border-left: none; */
+}
+.sales .infoCenter .quanPic img{
+    margin-left: 24px;  
+}
+.sales .infoCenter .coupon .quanInfo{
+    float: left;
+    border:1px #DE1C31 solid;
+    font-size: 14px;
+    width: 250px;
+    height: 84px;
+    padding-left: 50px;
+    padding-top: 6px;
+    border-left: none;
+}
+.sales .infoCenter .coupon .quanInfo .nowPrice{
+    font-size: 18px;
+}
+.sales .infoCenter .coupon .quanInfo .quanInfo_right{
+    float:right;
+    padding-right: 8px;
+}
+.sales .infoCenter .coupon .quanInfo .beforPrice{
+    text-decoration: line-through;
+}
+.tabs{
+    /* width: 1226px; */
+    min-width: 340px;
+    /* height: 514px; */
+    margin-top: 20px;
+}
+.tabs .infoCenter #myApp{
+    width: 960px;
+    /* height: 514px; */
+    /* background: #ff0; */
+}
+/* 选项卡 */
+.storeTabs{
+    margin-top: 16px;
+    
+}
+.storeTabs .switchTab{
+    width: 950px;
+}
+
+
+
+.storeTabs .el-tabs__item.is-active {
+    color: #DE1C31;
+   
+}
+.storeTabs .el-tabs__item:hover {
+    color: #DE1C31;
+    cursor: pointer;
+}
+.storeTabs .el-tabs__active-bar {
+   
+    background-color: #DE1C31;
+    
+}
+
+
+.storeTabs .switch{
+    float: left;
+    min-height: 166px;
+    /* background: #DE1C31; */
+}
+.storeTabs .switch:nth-child(6n){
+    margin-right: 0;
+}
+.storeTabs .switch dl{
+    width: 135px;
+    height: 145px;
+    float: left;
+    margin-right: 30px;
+    margin-top:10px;
+}
+.storeTabs .switch dl dt img{
+    width: 135px;
+    height: 114px;
+    
+}
+.storeTabs .switch dl dd{
+    background: #F6F6F6;
+}
+
+/* 网友点评 */
+.netizensComment{
+    /* width: 960px; */
+    /* height: 300px; */
+    min-height: 540px;
+    /* background: #f0f; */
+    margin-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.netizensComment .commentTit .commentLeft{
+    float: left;
+    font-size: 22px;
+}
+.netizensComment .commentTit .commenRight{
+    float: right;
+    font-size: 16px;
+   
+}
+.netizensComment .commentTit .commenRight span{
+    display: inline-block;
+    margin-right: 40px;
+}
+/* .netizensComment .searchFont input{
+    
+} */
+.netizensComment .searchFont p{
+    float: left;
+    font-size: 16px;
+    border: 1px #DE1C31 solid;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding:4px 6px;
+    margin-top:10px;
+}
+.netizensComment .assessbtn input{
+    border: #DE1C31 1px solid;
+    margin-left: 20px;
+    margin-top:10px;
+}
+.netizensComment .commentText dl{
+    border-bottom: 1px solid #CBCBCB;
+    margin-top: 16px;
+    padding-bottom: 8px;
+}
+.netizensComment .commentText dt{
+    float: left;
+    margin-right: 20px;
+}
+.netizensComment .commentText dd{
+    margin-top: 14px;
+}
+.netizensComment .commentText .comUsername{
+    padding-top:24px;
+}
+/* .netizensComment .commentText dd .commentStar{
+    display: inline-block;
+} */
+.netizensComment .commentTex .comText{
+    margin-top: 10px;
+}
+.netizensComment .commentText dd .comMainText{
+    clear: both;
+    margin-top: 16px;
+    margin-left: 60px;
+    display: inline-block;
+}
+.netizensComment .commentText dd .commentAbridge{
+    width: 126px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.netizensComment .commentText dd .comMainText img{
+    width: 92px;
+    height: 92px;
+    margin-right: 6px;
+}
+.netizensComment .commentText dd .comTextThree{
+    display: none;
+}
+.netizensComment .commentText .comDevelop{
+    float: right;
+    /* clear: both; */
+}
+.netizensComment .commentText dd .comTextRight{
+    float: right;
+    /* clear: both; */
+    
+}
+.netizensComment .commentText .comTextBottom{
+    margin-left: 110px;
+    clear: both;
+    padding-top: 18px;
+}
+.netizensComment .moreReviews{
+    float:right;
+    margin: 14px;
+    height:30px;
+    line-height: 26px;
+}
+
+
+
+.netizensComment .el-radio__input.is-checked+.el-radio__label {
+    color: #DE1C31;
+}
+.netizensComment .el-radio__input.is-checked .el-radio__inner {
+    border-color: #DE1C31;
+    background: #DE1C31;
+}
+/* 展开评论 */
+.comText .el-collapse-item__header {
+    
+    display: block;
+    border-bottom:none;
+    float: right;
+}
+.comText .el-collapse {
+    border-top:none;
+    border-bottom:none;
+}
+.comText .el-collapse-item__wrap {
+    border-bottom:none;
+}
+.comText .el-collapse-item__content {
+    font-size: 16px;
+}
+
+
+
+
+
+/* 写点评 */
+.commentOn{
+    margin-top: 10px;
+   
+    
+    /* font-size: 14px; */
+}
+.commentOn .commentOn_shopName{
+    height: 50px;
+    font-size: 14px;
+    background: #fff;
+    width: 960px;
+    line-height: 50px;
+}
+.commentStar element.style {
+    color: #DE1C31;
+}
+.commentOn .commentOn_shopName span{
+    font-size: 24px;
+    margin-left: 16px;
+}
+.commentOn .commentOn_mag{
+    min-height: 400px;
+    background: #fff;
+    width: 960px;
+    margin-top: 10px;
+    border: #DE1C31 1px solid;
+}
+.commentOn .commentOn_mag .commentOn_Tit{
+    height: 40px;
+    border-bottom: #DE1C31 1px solid;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 16px;
+    
+}
+.commentOn .commentOn_mag .comEnsemble{
+    display: inline-block;
+    margin-top:10px;
+}
+.commentOn .commentOn_mag textarea{
+    width:500px;
+}
+
+
+
+/* 写评论 */
+.block{
+    margin-top: 8px;
+}
+/* 口味 环境 服务 */
+.commentOn_mag .comClassify .el-form-item{
+ float: left;
+}
+/* 上传图片 */
+/* 提示 */
+.el-upload__tip {
+    width: 105px;
+}
+.uploadImage{
+    margin-left: 64px;
+}
+/* 图片的ul */
+.uploadImage  .el-upload-list {
+margin: 0;
+padding: 0;
+list-style: none;
+margin-top: -56px;
+margin-left: 115px;
+min-height: 92px;
+}
+.el-upload-list--picture .el-upload-list__item {
+float: left;
+width: 210px;
+margin-left: 12px;
+}
+/* 提交按钮 */
+.submitBtn{
+margin: 10px;
+}
+body .el-button--primary {
+color: #FFF;
+background-color: #DE1C31;
+border-color: #DE1C31;
+}
+body .el-button--primary:hover {
+background: #DE1C31;
+border-color: #DE1C31;
+color: #FFF;
+}
