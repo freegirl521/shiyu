@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="input_wrap">
-                        <h1>数量:</h1>
+                        <span>数量:</span>
                         <!-- <div class="border">
                             <a href="javascript:" class="down_btn">
                                 <i class="iconfont">&#xe603;</i>
@@ -43,14 +43,19 @@
                         <!-- //计数器 -->
                         <el-input-number v-model="num" @change="handleChange" :min="1" label="计数"></el-input-number>
                     </div>
-                        <div class="rushing">
-                            <span>立即抢购</span>
+                        <!-- <div class="rushing"> -->
+                            <!-- <span>立即抢购</span> -->
+                            <div class="rob">
+                            <snapUp></snapUp>
                         </div>
                 </div> 
     </div>
 </template>
 
+
 <script>
+    import snapUp from "./snapUp.vue"
+
     export default {
         name:"right",
         data(){
@@ -69,9 +74,20 @@
                 console.log(value);
             }
         },
+<<<<<<< HEAD
+         components:{
+            snapUp
+        }
+=======
+>>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scorped>
+    .input_wrap .el-input-number .el-input-number__decrease .el-icon-minus{
+        font-size:12px !important;
+    }
+    .el-button{
+        padding: 0;
+    }
 </style>
