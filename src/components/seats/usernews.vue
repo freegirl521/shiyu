@@ -2,46 +2,46 @@
     <div>
         <div class="shopHead common_style">
             <div class="infoCenter">
-                <h3>{{$store.state.shopNewsList.shopname}}</h3>
+                <h3>{{$store.state.shop.shopNewsList.shopname}}</h3>
                 <div class="shopScore">
                     <!--评论、人均、口味、环境、服务-->
                     <div>
                         <!-- 店铺评价(几星) -->
                         <p class="shopIco">
                             <!-- v-model="$store.state.commentDetail.shopInfo.commentscore"传进来的评星数(就是原来的value) -->
-                           <el-rate v-model="$store.state.shopNewsList.commentscore" disabled :colors="['#DE1C31','#DE1C31','#DE1C31']" text-color="#DE1C31" score-template="{value}">
+                           <el-rate v-model="$store.state.shop.shopNewsList.commentscore" disabled :colors="['#DE1C31','#DE1C31','#DE1C31']" text-color="#DE1C31" score-template="{value}">
                             </el-rate> 
                         </p>
                     </div>
                     <div>
-                        <span>{{$store.state.shopNewsList.commentnum}}</span> 条评论
+                        <span>{{$store.state.shop.shopNewsList.commentnum}}</span> 条评论
                     </div>
                     <div>
                         人均
-                        <span>{{$store.state.shopNewsList.price}}</span> 元
+                        <span>{{$store.state.shop.shopNewsList.price}}</span> 元
                     </div>
                     <div>
                         口味：
-                        <span>{{$store.state.shopNewsList.taste}}</span>
+                        <span>{{$store.state.shop.shopNewsList.taste}}</span>
                     </div>
                     <div>
                         环境：
-                        <span>{{$store.state.shopNewsList.environment}}</span>
+                        <span>{{$store.state.shop.shopNewsList.environment}}</span>
                     </div>
                     <div>
                         服务：
-                        <span>{{$store.state.shopNewsList.serve}}</span>
+                        <span>{{$store.state.shop.shopNewsList.serve}}</span>
                     </div>
                 </div>
                 <div class="obclear">
                     <!-- 店铺地址 -->
-                    <p>地址：<span>{{$store.state.shopNewsList.shopads}}</span></p>
+                    <p>地址：<span>{{$store.state.shop.shopNewsList.shopads}}</span></p>
                     <!-- 电话 -->
-                    <p class="phone">电话：<span class="tel">{{$store.state.shopNewsList.shopphone}}</span></p>
-                    <p class="special">特色：
-                        <span class="tuan" v-show="$store.state.shopNewsList.feature === 1 || $store.state.shopNewsList.feature === 4 || $store.state.shopNewsList.feature === 5 || $store.state.shopNewsList.feature === 7"></span>
-                        <span class="ding" v-show="$store.state.shopNewsList.feature === 2 || $store.state.shopNewsList.feature === 4 || $store.state.shopNewsList.feature === 6 || $store.state.shopNewsList.feature === 7"></span>
-                        <span class="wai" v-show="$store.state.shopNewsList.feature === 3 || $store.state.shopNewsList.feature === 5 || $store.state.shopNewsList.feature === 6 || $store.state.shopNewsList.feature === 7"></span>
+                    <p class="phone">电话：<span class="tel">{{$store.state.shop.shopNewsList.shopphone}}</span></p>
+                    <p class="special"><b class="dib">特色</b>：
+                        <span class="tuan dib" v-show="$store.state.shop.shopNewsList.feature === 1 || $store.state.shop.shopNewsList.feature === 4 || $store.state.shop.shopNewsList.feature === 5 || $store.state.shop.shopNewsList.feature === 7"></span>
+                        <span class="ding dib" v-show="$store.state.shop.shopNewsList.feature === 2 || $store.state.shop.shopNewsList.feature === 4 || $store.state.shop.shopNewsList.feature === 6 || $store.state.shop.shopNewsList.feature === 7"></span>
+                        <span class="wai dib" v-show="$store.state.shop.shopNewsList.feature === 3 || $store.state.shop.shopNewsList.feature === 5 || $store.state.shop.shopNewsList.feature === 6 || $store.state.shop.shopNewsList.feature === 7"></span> 
                     </p>
                     <p>营业时间：周一至周日 9:20-22:30</p>
                 </div>
@@ -67,6 +67,8 @@ padding-top: 12px;
 width: 100%;
 margin: 0 auto;
 background: #FFFFFF;
+border-bottom: 1px solid #DE1C31;
+
 }
 body .shopHead {
 /* padding:1%; */
@@ -162,4 +164,13 @@ border-radius: 5px;
 /* .shopHead .infoCenter .shopHead_left .book img {
 vertical-align: middle;
 margin: 0 10 */
+.special .tuan{
+    background:url("../../assets/img/login/type.png") no-repeat;
+}
+.special .ding{
+     background:url("../../assets/img/login/type.png") no-repeat -30px 0;
+}
+.special .wai{
+     background:url("../../assets/img/login/type.png") no-repeat -60px 0;
+}
 </style>

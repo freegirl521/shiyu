@@ -11,7 +11,19 @@ export default {
         shopId:localStorage.shopId,// 商户Id
         shopName:localStorage.shopName,//店铺名称
         token:localStorage.token,// token
-        shopNewsList:{},
+        shopNewsList:{
+            // shopname:"喵喵喵",
+            // commentscore:4,
+            // commentnum:200,
+            // price:132,
+            // taste:9.2,
+            // environment:9.2,
+            // serve:8.7,
+            // shopads:"北京市海淀区",
+            // shopphone:"13245678900",
+            // feature:""
+        },
+        shopOrdersList:[]
     },
     mutations:{
         SET_LIST(state,list){
@@ -19,6 +31,9 @@ export default {
         },
         SET_USERINFO(state,list){
             state.shopNewsList=list;
+        },
+        GET_SHOPORDERS(state,list){
+            state.shopOrdersList=list;
         },
         SET_SHOPID_SHOPNAME(state,obj){
             console.log(2222,obj);
@@ -33,7 +48,7 @@ export default {
         SETDIALOG(state,Dialog){
             console.log(Dialog)
             state.Dialog=Dialog;
-        }
+        },
     },
     getters:{
     
@@ -83,10 +98,10 @@ export default {
                 }
             })
         },
-        getShopNews({commit},shopnew){
+        getShopNews({commit}){
             axios.get("/shop/GetShopInfo",{
                  params:{
-                    shopid:1,
+                    shopid:1
                  }
              })
                  .then(({data})=>{
@@ -95,5 +110,20 @@ export default {
                      
              })
          },
+         getShopOrders({commit}){
+            axios.get("/shop/GetShopIndentList",{
+                 params:{
+                    shopid:1,
+                    size:6,
+                    page:1
+                 }
+             })
+                 .then(({data})=>{
+                     console.log(data)
+                     commit("GET_SHOPORDERS",data.data);
+                     
+             })
+         },
+        
     }
 }

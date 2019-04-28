@@ -105,8 +105,7 @@
 				</el-tab-pane>
 				<el-tab-pane name="fourth">
 					<span slot="label"><i><img src="../../assets/img/comment_shopcenter/shopcenter4.png"></i> 基本信息&订座</span>
-					<usernews></usernews>
-					<userorder></userorder>
+					<shoporder></shoporder>
 				</el-tab-pane>
 				<!-- 左边底部的设置 -->
 				<el-tab-pane>
@@ -125,8 +124,7 @@
 </template>
 
 <script>
-	import userorder from"../seats/userorder.vue";
-	import usernews from "../seats/usernews.vue"
+	import shoporder from "../../components/seats/shoporder.vue"
 
 	import "../../assets/css/public.css";
 	import "../../assets/css/shopcenter.css";
@@ -141,7 +139,8 @@
 				isShow:-1,
 				activeName: 'first',
 				tabPosition: 'left',
-				shopnew:[],
+				shopnew:{},
+				orderlist:[],
 				tags: [
 					{ name: '标签一', type: '' },
 					{ name: '标签二', type: 'success' },
@@ -261,12 +260,12 @@
 		},
 		mounted() {
 		this.$store.dispatch("getShopInfo",this.pageIndex);
-		this.$store.dispatch("getShopNews",this.shopnew);
+		this.$store.dispatch("getShopNews");
+		this.$store.dispatch("getShopOrders");
 		},
 		
 		components:{
-			userorder,
-			usernews
+			shoporder
 		}
   	}  
 </script>

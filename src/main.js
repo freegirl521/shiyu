@@ -21,7 +21,7 @@ Vue.prototype.$http= axios
 
 
 axios.interceptors.request.use(config=>{
-  config.url="http://10.9.62.230:8080"+config.url;
+  config.url="http://10.9.62.238:8080"+config.url;
   return config;
 })
 
