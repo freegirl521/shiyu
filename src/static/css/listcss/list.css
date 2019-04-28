@@ -13,17 +13,18 @@ body{font:12px "微软雅黑";}
 body{
 	background:rgba(248,248,248,1);
 }
-.nav-food{
+/* .nav-food{
 	width: 100%;
-	height: 100px;
-	/* background: palegoldenrod; */
+	min-height: 50px;
+
 }
 .nav-food .nav-food1{
 	width: 1200px;
-	height: 100px;
+	
 	background:#FFFFFF;
 	margin: 0 auto;
-	display: flex;
+	
+	padding-bottom: 8px;
 }
 .nav-food .nav-food1 h4{
 	font-size: 14px;
@@ -35,28 +36,30 @@ body{
 }
  .nav-food .nav-food1 .bx{
 	font-size: 14px;
-	margin-top: 19px;
-	 margin-left: 15px; 
+	margin-top: -15px;
+	 margin-left: 76px; 
 	width: 29px;
 	height: 14px;
-}
-.nav-food .nav-food1 .ufood{
+	float: left;
+} */
+/* .nav-food .nav-food1 .ufooda{
 	margin-top: 19px;
 	margin-left: 18px;
 	width: 1080px;
-	height: 81px;
-	/* background: palegreen; */
+	
+	
 }
-.nav-food .nav-food1 .ufood .line1 a{
+.nav-food .nav-food1 .ufooda a{
 	width: 74px;
 	height: 18px;
-	/* background: palevioletred; */
+	
 	display: inline-block;
 	margin-right: 13px;
 	font-size: 14px;
+	float: left;
 	
-}
-.nav-food .nav-food1 .ufood .line1 .lasta{
+} */
+/* .nav-food .nav-food1 .ufood .line1 .lasta{
 	margin-right: 0px;
 }
 .nav-food .nav-food1 .ufood .line1:nth-of-type(2){
@@ -69,8 +72,8 @@ body{
 	background:#DE1C31;
 	color: white;
 	border-radius: 5px;
-	/* border: 1px solid; */
-}
+	
+} */
 .nav-area {
 	width: 100%;
 	height: 125px;
@@ -110,7 +113,7 @@ body{
 .nav-area .nav-area1 .area .line2{
 	border-bottom: 1px solid red;
 }
-.nav-area .nav-area1 .area .line2 a {
+.nav-area .nav-area1 .area .line2 span {
 	width: 80px;
 	height: 22px;
 	/* background: palevioletred; */
@@ -119,7 +122,7 @@ body{
 	font-size: 14px;
 	text-align: center;
 }
-.nav-area .nav-area1 .area .line2 a:hover{
+.nav-area .nav-area1 .area .line2 span:hover{
 	background:red;
 	color: white;
 }
@@ -190,10 +193,15 @@ body{
 .choice .choice1 ul li:nth-of-type(3){
 	margin-left: 50px;
 }
-.choice .choice1 ul li img{
+.choice .choice1 ul li span{
 	width: 10px;
 	height: 16px;
 	padding-left: 5px;
+	display: inline-block;
+}
+.choice .choice1 ul li span img{
+	width: 100%;
+	height:  100%;
 }
 .choice .choice1 ul li a{
 	width:30px;
@@ -261,7 +269,7 @@ body{
 	margin-top: 30px;
 }
 .list .list1 .text{
-	/* width: 370px; */
+	width: 300px;
 	height: 240px;
 	/* background: peru; */
 	margin-left: 20px;
@@ -366,6 +374,7 @@ body{
 	/* background: blueviolet; */
 	/* width:100px; */
 	margin-left: 20px;
+	width: 120px;
 }
 .list .list1 .tdw img{
 	width: 30px;
@@ -383,7 +392,7 @@ body{
 	/* height: 100px;
 	width: 100px; */
 	/* background: orange; */
-	margin-left: 40px;
+	margin-left: 76px;
 	margin-top: 75px;
 }
 .list .list1 .score h4{

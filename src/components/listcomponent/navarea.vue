@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import tab from "../views/tab.vue"
+	import tab from "./tab.vue"
 	 
 	export default{
 		name:"navarea",
@@ -20,5 +20,5 @@
 	}
 </script>
 
-<style>
+<style scoped>
 </style>

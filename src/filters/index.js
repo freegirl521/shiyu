@@ -11,7 +11,18 @@ const filters = {
     },
     currency(v){
         return "￥"+v.toFixed(2)
-    }
+    },
+	
+
+  numFilter(value) {
+
+    let realVal = parseFloat(value).toFixed(1)
+
+    return realVal
+
+  }
+
+
 }
 
 export default {
