@@ -4,7 +4,7 @@
         <div class="bar_wrap">
             <div class="top_bar">
                 <div class="left l-info">
-                    <img src="../assets/img/comment_shopcenter/home@2x.png" alt="">
+                    <img src="../../assets/img/comment_shopcenter/home@2x.png" alt="">
                     <a href="">回到首页</a>
                     <!-- <a class="city" target="_blank">
                         <span class="map-info"></span><span>北京</span>
@@ -23,7 +23,7 @@
         </div>
         <div class="top_wrap">
             <div class="top ">
-                <img src="../assets/img/comment_shopcenter/Food Meet@2x.png" class="left" alt="">
+                <img src="../../assets/img/comment_shopcenter/Food Meet@2x.png" class="left" alt="">
                 <p class="left">我要点评>></p>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <p class="left">点评记录美好生活</p>
                 <input class="right" type="text" v-model.lazy="str" placeholder="请输入店名或商圈名" @blur="search(str)">     
                 <div class="btn">
-                    <img src="../assets/img/comment_shopcenter/搜索 (1)@2x.png" alt="">
+                    <img src="../../assets/img/comment_shopcenter/搜索 (1)@2x.png" alt="">
                 </div>           
             </div>
         </div>
@@ -42,14 +42,14 @@
 
     <div class="content">
         <template>            
-        <div class="item_wrap" @click="showToggle(index)" v-for="(item,index) in list"  :key="index">
+        <div class="item_wrap" @click="showToggle(index)" v-for="(item,index) in $store.state.comment.commentList"  :key="index">
             <div class="item">
                 <div class="pic left">
-                    <img src="../assets/img/comment_shopcenter/1a5039bfaf96c6d0187ec794f0b3bbfef23f9396311d-HBRNdK_fw658 拷贝 2@2x.png" alt="">
+                    <img src="../../assets/img/comment_shopcenter/1a5039bfaf96c6d0187ec794f0b3bbfef23f9396311d-HBRNdK_fw658 拷贝 2@2x.png" alt="">
                 </div>
                 <form class="left">
                     <div class="clear">
-                        <h4 class="left">{{item.name}}</h4>
+                        <h4 class="left">{{item.shopname}}</h4>
                         <span class="left pay">美团智能支付</span>
                     </div>
                     <div class="score">
@@ -89,7 +89,7 @@
                         </div>
                         <div class="more none">
                             获取更多信息
-                            <img src="../assets/img/comment_shopcenter/箭头@2x.png" alt="">
+                            <img src="../../assets/img/comment_shopcenter/箭头@2x.png" alt="">
                         </div>
                         <div class="averagePrice">
                             <span>人均：</span>
@@ -106,7 +106,7 @@
                             </div>
                             <p class="right">
                                 <!-- 展开 -->
-                                <img src="../assets/img/comment_shopcenter/箭头@2x.png" alt="">
+                                <img src="../../assets/img/comment_shopcenter/箭头@2x.png" alt="">
                             </p>   
                         </div>
                         <div class="park">
@@ -115,7 +115,7 @@
                         </div>
                         <p class="close">
                             收起选项
-                            <img src="../assets/img/comment_shopcenter/箭头@2x.png" alt="">
+                            <img src="../../assets/img/comment_shopcenter/箭头@2x.png" alt="">
                         </p>
                         <div class="clear">
                             <div class="send left" @click="submit(index)">
@@ -141,9 +141,9 @@
             prev-text="上一页"
             next-text="下一页"
             layout="prev, pager, next"
-            :page-count="$store.state.page.pageSum"
+            :page-count="$store.state.page.pages"
             :current-page="$store.state.page.pageIndex"
-            @current-change ="v=>this.$store.dispatch('getAdminLog',v)"
+            @current-change ="v=>this.$store.dispatch('getList',{keyword:'',pageIndex:v})"
              >
         </el-pagination>
     </div>
@@ -164,7 +164,7 @@
 </template>
 
 <script>
-    import "../assets/style/comment.css";
+    import "../../assets/style/comment.css";
     export default {
         name:"comment",
         data() {
@@ -193,22 +193,24 @@
                 this.isShow = index;
             },
             handleCurrentChange(val){
-                
-                this.cur=val
+                this.cur=val;
+                console.log(val,797989);
             },
             search(keyword){
                 console.log(keyword)
-                this.$store.dispatch("getList",keyword);
+                this.$store.dispatch("getList",{keyword:keyword,pageIndex:this.$store.state.page.pageIndex});
             },
             submit(index){
                 var obj;
-                obj={comment:this.$refs.text[index].value,
+                obj={evaluate:this.$refs.text[index].value,
                 score:this.value1[index],
                 flavor:this.value2[index],
                 service:this.value3[index],
-                environment:this.value4[index],
-                price:this.$refs.price[index].value,
-                parking:this.$refs.parking[index].value
+                enviorment:this.value4[index],
+                averageprice:this.$refs.price[index].value,
+                car:this.$refs.parking[index].value,
+                menuid:2,
+                commentimg:""
                 };
                 console.log(obj);
                 // 传出去
@@ -217,9 +219,8 @@
             
         },
         mounted() {
-            this.$store.dispatch("getList","");
-        }
-            
+            this.$store.dispatch("getList",{keyword:"",pageIndex:1});
+            },            
     }
 </script>
 

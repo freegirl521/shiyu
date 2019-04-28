@@ -20,17 +20,17 @@
 		<div class="contenttop_wrap">
 			<div class="header-content center clear">
 				<div class="header-img left">
-					<img src="./../assets/img/comment_shopcenter/Food Meet@2x.png" />
+					<img src="../../assets/img/comment_shopcenter/Food Meet@2x.png" />
 					<div class="shop-center right"><span class="circle"></span>商户中心</div>
 				</div>
-				<img class="right user-img" src="../assets/img/comment_shopcenter/u-img.png"/>
+				<img class="right user-img" src="../../assets/img/comment_shopcenter/u-img.png"/>
 			</div>
 		</div>
 		<div class="shopcenter">
 			<div class="manage">FOOD MEET ·<br />  前端商户管理中心</div>
 			<div class="title">
 				<p>
-					菜品&价格<img src="../assets/img/comment_shopcenter/close.png" />
+					菜品&价格<img src="../../assets/img/comment_shopcenter/close.png" />
 				</p>
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 				<el-tab-pane name="first">
 					<span slot="label">
 						<i>
-							<img src="../assets/img/comment_shopcenter/shopcenter1.png">
+							<img src="../../assets/img/comment_shopcenter/shopcenter1.png">
 						</i>
 						 菜品&价格
 					</span>
@@ -62,8 +62,8 @@
 									<div class="menu-item" v-for="(item,index) in $store.state.shop.shopInfoList" :key=index>
 										<li class="food-info" @mouseover="handle(index)" @mouseout="hiden">
 											<div class="upPic">
-												<img class="del" src="../assets/img/comment_shopcenter/del.png" @click="del(item.menuid)"/>
-												<img v-show="item.type" class="coll" src="../assets/img/comment_shopcenter/黄星.png"/>
+												<img class="del" src="../../assets/img/comment_shopcenter/del.png" @click="del(item.menuid)"/>
+												<img v-show="item.type" class="coll" src="../../assets/img/comment_shopcenter/黄星.png"/>
 												<img :src="item.img"/>
 											</div>
 											<p class="food-name" >{{item.menuname}}</p>
@@ -75,44 +75,7 @@
 									</div>
 								</template>
 							</ul>
-							<el-dialog  :visible.sync="dialogFormVisible" width="40%">
-								<div class="wrap">
-									<!-- 上传 -->
-									<el-upload
-											class="upload-demo"
-											drag
-											action="https://jsonplaceholder.typicode.com/posts/"
-											multiple>
-										<i class="el-icon-upload"></i>
-										<div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
-									</el-upload>
-									<img src="../assets/img/comment_shopcenter/shopcenter1.png">
-									<img src="../assets/img/comment_shopcenter/shopcenter1.png">
-									<img src="../assets/img/comment_shopcenter/shopcenter1.png">
-								</div>
-									<div class="food_info">
-											<div>
-													<p>菜品名称： <input class="food_name" type="text" v-model="$store.state.shop.Dialog.menuname" /></p>
-													<p>价格： <input class="food_price" type="text" v-model="$store.state.shop.Dialog.price"/></p>
-													<p>简介： <input class="food_context" type="text" v-model="$store.state.shop.Dialog.menutext"/></p>
-													<div>是否推荐菜：
-													<el-switch
-																	v-model="value"
-																	active-color="#DE1C31"
-																	active-value="0"
-																	inactive-value="1">
-													</el-switch>
-													</div>
-
-
-											</div>
-									</div>
-
-
-									<div slot="footer" class="dialog-footer">
-											<el-button type="primary" @click="updated($store.state.shop.Dialog.menuid)">确 定</el-button>
-									</div>
-							</el-dialog>	
+							
 							<div class="footer">
 								<!-- <span>首页</span><span>上一页</span><i>1/2</i><span>下一页</span><span>末页</span>
 								<input class="page" type="text" /> 
@@ -133,25 +96,25 @@
 					</div>
 				</el-tab-pane>
 				<el-tab-pane name="second">
-					<span slot="label"><i><img src="../assets/img/comment_shopcenter/shopcenter2.png"></i> 商家相册</span>
+					<span slot="label"><i><img src="../../assets/img/comment_shopcenter/shopcenter2.png"></i> 商家相册</span>
 					商家相册
 				</el-tab-pane>
 				<el-tab-pane name="third">
-					<span slot="label"><i><img src="../assets/img/comment_shopcenter/shopcenter3.png"></i> 优惠&团购</span>
+					<span slot="label"><i><img src="../../assets/img/comment_shopcenter/shopcenter3.png"></i> 优惠&团购</span>
 					优惠&团购
 				</el-tab-pane>
 				<el-tab-pane name="fourth">
-					<span slot="label"><i><img src="../assets/img/comment_shopcenter/shopcenter4.png"></i> 基本信息&订座</span>
-					基本信息&订座
+					<span slot="label"><i><img src="../../assets/img/comment_shopcenter/shopcenter4.png"></i> 基本信息&订座</span>
+					<shoporder></shoporder>
 				</el-tab-pane>
 				<!-- 左边底部的设置 -->
 				<el-tab-pane>
 					<span slot="label">
 						<div class="more1">
-							<img src="../assets/img/comment_shopcenter/setting.png" />
-							<img src="../assets/img/comment_shopcenter/skin.png">
-							<img src="../assets/img/comment_shopcenter/more.png">
-							<img src="../assets/img/comment_shopcenter/message.png">
+							<img src="../../assets/img/comment_shopcenter/setting.png" />
+							<img src="../../assets/img/comment_shopcenter/skin.png">
+							<img src="../../assets/img/comment_shopcenter/more.png">
+							<img src="../../assets/img/comment_shopcenter/message.png">
 						</div>
 					</span>
 				</el-tab-pane>
@@ -161,9 +124,10 @@
 </template>
 
 <script>
-	import "../assets/style/public.css";
-	import "../assets/style/shopcenter.css";
-	import dialog from "../components/dialog.vue";
+	import shoporder from "../../components/seats/shoporder.vue"
+
+	import "../../assets/css/public.css";
+	import "../../assets/css/shopcenter.css";
 	export default {
 		name:"shopcenter",
 		data() {
@@ -175,6 +139,8 @@
 				isShow:-1,
 				activeName: 'first',
 				tabPosition: 'left',
+				shopnew:{},
+				orderlist:[],
 				tags: [
 					{ name: '标签一', type: '' },
 					{ name: '标签二', type: 'success' },
@@ -184,62 +150,62 @@
 				],
 				list:[
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙",
 						score:1
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/2.png"),
+						img:require("../../assets/img/comment_shopcenter/2.png"),
 						name:"神仙",
 						score:0,
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/2.png"),
+						img:require("../../assets/img/comment_shopcenter/2.png"),
 						name:"神仙",
 						score:1
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					},
 					{
-						img:require("../assets/img/comment_shopcenter/1.png"),
+						img:require("../../assets/img/comment_shopcenter/1.png"),
 						name:"神仙"
 					}
 				],
@@ -294,11 +260,17 @@
 		},
 		mounted() {
 		this.$store.dispatch("getShopInfo",this.pageIndex);
-    	}
+		this.$store.dispatch("getShopNews");
+		this.$store.dispatch("getShopOrders");
+		},
+		
+		components:{
+			shoporder
+		}
   	}  
 </script>
 
-<style>
+<style scoped>
 	.mask{
 		width:180px;
 		height:160px;
@@ -389,5 +361,9 @@
     }
     .food_info p{
         line-height: 24px;
-    }
+	}
+	img{
+	width: auto;
+	display: inline-block;
+}
 </style>
