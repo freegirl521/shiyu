@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import userReg from "../views/userReg.vue"
+import storedetail from "../views/store_details/storedetail.vue"
 
 Vue.use(Router)
 
@@ -11,7 +12,7 @@ export default new Router({
   routes: [
    
     {
-      path: '/',
+      path: 'home',
       name: 'home',
       component: Home
     },
@@ -19,6 +20,11 @@ export default new Router({
       path:"/userReg",
       name:"userReg",
       component:userReg
+    },
+    {
+      path:"/storedetail",
+      name:"storedetail",
+      component:storedetail
     },
     {
       path: '/about',

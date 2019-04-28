@@ -1,5 +1,11 @@
+import Vue from "vue"
+import vuex from "vuex"
+import commentDetail from "./commentDetail"
+import axios from "axios"
 
-export default{
+Vue.use(vuex)
+
+export default new vuex.Store({
 state:{
 
 },
@@ -11,5 +17,8 @@ getters:{
 },
 actions:{
     
+},
+modules:{
+    commentDetail
 }
-}
+})
