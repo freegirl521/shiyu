@@ -11,11 +11,21 @@ export default {
         shopId:localStorage.shopId,// 商户Id
         shopName:localStorage.shopName,//店铺名称
         token:localStorage.token,// token
+<<<<<<< HEAD
+=======
+        shopNewsList:{},
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
     },
     mutations:{
         SET_LIST(state,list){
             state.shopInfoList=list;
         },
+<<<<<<< HEAD
+=======
+        SET_USERINFO(state,list){
+            state.shopNewsList=list;
+        },
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
         SET_SHOPID_SHOPNAME(state,obj){
             console.log(2222,obj);
             state.shopId = localStorage.shopId = obj.shopId;
@@ -78,6 +88,22 @@ export default {
                     alert("删除成功");
                 }
             })
+<<<<<<< HEAD
         }
+=======
+        },
+        getShopNews({commit},shopnew){
+            axios.get("/shop/GetShopInfo",{
+                 params:{
+                    shopid:1,
+                 }
+             })
+                 .then(({data})=>{
+                     console.log(data)
+                     commit("SET_USERINFO",data.data);
+                     
+             })
+         },
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
     }
 }

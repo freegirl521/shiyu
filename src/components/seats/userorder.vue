@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="order1" @mouseenter="isShow = !isShow" @mouseleave="isShow = !isShow" >
         <div v-for="(items,index) in $store.state.shop.shopOrdersList.list" :key="index"  class="orderbox">
         <div class="order" >
@@ -21,6 +22,28 @@
             </div>
         </div>
         </div>
+=======
+    <div>
+        <div class="order">
+            <div class="order-top">
+                <div class="order-left dib">
+                    <img src="../../assets/img/order/user.png">
+                </div>
+                <div class="order-right dib" >
+                    <h3>爱吃的仙女</h3>
+                    <p>2019年04月18日 9:46</p>
+                </div>
+                <div class="order-news">
+                    <p>人数：2</p>
+                    <p>时间：2019年04月18日 17:30</p>
+                </div>
+                <p>联系方式：13333333333</p>
+            </div>
+            <div class="delete">
+                <img src="../../assets/img/order/clear.png">
+            </div>
+        </div>
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
     </div>
 </template>
 
@@ -29,6 +52,7 @@
         name: '',
         data() {
             return {
+<<<<<<< HEAD
                     isShow:false,
                     List:[
                         {
@@ -88,11 +112,22 @@
         },
         mounted(){
             this.$store.dispatch("getShopOrders");
+=======
+                    List:[{
+                    indented:"",
+                    username:"爱吃的仙女",
+                    createdate:"2019年04月18日 9:46",
+                    mealtime:"2019年04月18日 17:30",
+                    userphone:"联系方式：13333333333",
+                }]
+            }
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
         }
     }
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 
 .orderbox{
     width: 32%;
@@ -103,6 +138,13 @@
     display: inline-block;
     margin-right: 5px;
     border:1px solid #DE1C31;
+=======
+.order{
+    width: 278px;
+    padding:15px;
+    background: #F8F8F8;
+    position: relative;
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
 }
 .order-left{
     margin-right: 10px;

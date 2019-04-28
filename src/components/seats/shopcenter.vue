@@ -105,7 +105,12 @@
 				</el-tab-pane>
 				<el-tab-pane name="fourth">
 					<span slot="label"><i><img src="../../assets/img/comment_shopcenter/shopcenter4.png"></i> 基本信息&订座</span>
+<<<<<<< HEAD
 					<shoporder></shoporder>
+=======
+					<usernews></usernews>
+					<userorder></userorder>
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
 				</el-tab-pane>
 				<!-- 左边底部的设置 -->
 				<el-tab-pane>
@@ -124,7 +129,12 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 	import shoporder from "../../components/seats/shoporder.vue"
+=======
+	import userorder from"../seats/userorder.vue";
+	import usernews from "../seats/usernews.vue"
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
 
 	import "../../assets/css/public.css";
 	import "../../assets/css/shopcenter.css";
@@ -139,8 +149,12 @@
 				isShow:-1,
 				activeName: 'first',
 				tabPosition: 'left',
+<<<<<<< HEAD
 				shopnew:{},
 				orderlist:[],
+=======
+				shopnew:[],
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
 				tags: [
 					{ name: '标签一', type: '' },
 					{ name: '标签二', type: 'success' },
@@ -260,12 +274,21 @@
 		},
 		mounted() {
 		this.$store.dispatch("getShopInfo",this.pageIndex);
+<<<<<<< HEAD
 		this.$store.dispatch("getShopNews");
 		this.$store.dispatch("getShopOrders");
 		},
 		
 		components:{
 			shoporder
+=======
+		this.$store.dispatch("getShopNews",this.shopnew);
+		},
+		
+		components:{
+			userorder,
+			usernews
+>>>>>>> 8124c75c32628c71d45a883d50158c6263936d5e
 		}
   	}  
 </script>
