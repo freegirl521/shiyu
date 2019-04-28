@@ -1,0 +1,593 @@
+.mtop{
+    margin-top: 5px !important;
+}
+.top-nav {
+    width: 100%;
+    min-width: 1190px;
+    height: 35px;
+    background-color: #f6f6f6;
+    font-family: PingFangSC-Regular,Microsoft YaHei,sans-serif;
+    font-size: 12px;
+}
+.header-container .top-nav {
+    width: 100%;
+    min-width: 960px;
+    height: 70px;
+    background:rgba(255,255,255,1);
+}
+.top-nav {
+    content: "";
+    display: block;
+    overflow: hidden;
+    clear: both;
+    position: static;
+}
+.top-nav .top-nav-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.top-nav .top-nav-container {
+    width: 1200px;
+}
+/*logo*/
+.top-nav .top-nav-container .mini-logo {
+    float: left;
+}
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+}
+.top-nav a {
+    color: #999;
+}
+.top-nav .top-nav-container .item {
+    float: left;
+    line-height: 17px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 10px 0;
+    margin-right: 10px;
+}
+
+.mini-logo a.item{
+    padding-left: 5px;
+}
+/*.top-nav .top-nav-container  .item {
+    border-left: 1px solid #313131;
+    border-right: 1px solid #313131;
+}*/
+.top-nav .top-nav-container .mini-logo .icon-logo {
+    background: url(../../img/myCenter/logo.png) no-repeat;
+
+    vertical-align: middle;
+    padding-right: 5px;
+    display: inline-block;
+    position: relative;
+    width: 105px;
+    height: 70px;
+    top: -3px;
+    background-size: 105px auto;
+
+}
+
+/*导航*/
+.top-nav .top-nav-container .quick-menu {
+    float: right;
+    padding-top: 17px;
+}
+.quick-menu a{
+    color:#DE1C31;
+    font-weight: bold;
+}
+.quick-menu a img{
+    width: 30px;
+    height: 30px;
+}
+.top-nav .top-nav-container .seprate {
+    float: left;
+    line-height: 35px;
+    margin-right: 9px;
+    margin-left: 9px;
+    color: #999;
+}
+
+
+/******头部信息**********/
+
+.wrapper{
+    margin-top: 30px;
+}
+.header-box{
+    background: white;
+}
+
+.home-header {
+    position: relative;
+    width: 1200px;
+    height: 227px;
+   /* margin-top: 75px;*/
+    margin: 0 auto;
+    padding: 10px 0 10px 10px;
+    margin-bottom: 10px;
+}
+
+.pic-txt li, .pic-txt {
+    zoom: 1;
+}
+
+.head-user .pic{
+    float: left;
+    margin-right: 64px;
+    _display: inline;
+    position: relative;
+    margin-top: 27px;
+}
+
+.pic-txt .pic img{
+    display: block;
+    border-radius: 3px;
+    width: 203px;
+    height: 167px;
+}
+.txt{
+    position: absolute;
+    left: 300px;
+    top: 54px;
+}
+.head-user .tit{
+
+    overflow: hidden;
+}
+.head-user .tit .name{
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    float: left;
+    margin-right: 5px;
+}
+.head-user .user-btn{
+    float: left;
+    margin-left: 64px;
+    padding-top: 5px;
+}
+.head-user .user-btn a{
+    position: relative;
+    color:#DE1C31;
+    margin-right: 64px;
+    top: 5px;
+}
+.user-info{
+    height: 20px;
+    margin-top: 20px;
+}
+.user-info .stars{
+    float: left;
+}
+.user-info .stars i{
+    display: block;
+    float: left;
+    background: url("../../img/myCenter/starad.png") no-repeat;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.tabs-box{
+    position: relative;
+    top:38px;
+   /* overflow: auto;*/
+    z-index: 9;
+    width: 910px;
+    zoom: 1;
+   /* margin: 0 auto;*/
+    background-color: #fff;
+}
+/*.tabs-box::after{
+    content: "\20";
+    display: block;
+    height: 0px;
+    visibility: hidden;
+    clear: both;
+}*/
+/*.tabs-box ul{
+    position: relative;
+    overflow: hidden;
+
+}*/
+/*.tab-nav ul::after{
+    content: "\20";
+    display: block;
+    height: 0px;
+    visibility: hidden;
+    clear: both;
+}*/
+
+.tabs-box ul li{
+    float: left;
+    height: 36px;
+    font-size: 20px;
+    width: 96px;
+    line-height: 36px;
+    margin-right: 14px;
+    text-align: center;
+    background:rgba(246,246,246,1);
+    border: 1px solid #DE1C31;
+    border-radius: 4px;
+    color: #333;
+}
+.tabs-box ul li.active{
+    background:rgba(222,28,49,1);
+    color: #FFFFFF;
+
+}
+
+/*内容部分*/
+.main,.main-w{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 22px;
+    background: #FFFFFF;
+    padding-bottom: 26px;
+}
+.m-index{
+    padding-bottom: 26px;
+}
+.m-index .sp-left{
+    float: left;
+    margin-left:42px ;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 43px;
+
+}
+.m-index .assessInfo{
+    float: left;
+    margin-left: 24px;
+    width: 1020px;
+    height:178px;
+    background:rgba(246,246,246,1);
+    border-radius:6px;
+    margin-top: 18px;
+}
+
+.assessInfo .ass-top,.ass-bott{
+    margin-left: 34px;
+}
+.assessInfo .ass-top{
+    margin-top: 22px;
+}
+
+.ass-top .ass-left{
+    float: left;
+}
+.ass-left span{
+    margin-right:24px;
+    font-size: 18px;
+}
+.ass-left span.sh{
+    font-size: 24px;
+}
+
+.ass-right{
+    float: right;
+    margin-right: 10px;
+    padding-top: 13px;
+}
+.ass-right a{
+    float: left;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #DE1C31;
+    text-align: center;
+    vertical-align: middle;
+    background: #de1c31; ;
+    margin-right: 31px;
+    border-radius: 4px;
+}
+.ass-bott{
+    margin-top: 17px;
+}
+.ass-bott span{
+   font-size: 20px;
+    float: left;
+    margin-right: 16px;
+}
+.ass-bott .textarea-plain{
+    font-size: 20px;
+    background: white;
+}
+/*******点评**********/
+.sassfor .sassfor-left{
+    float: left;
+    font-size: 24px;
+    margin-top: 43px;
+    margin-left:42px ;
+    font-weight: bold;
+
+}
+
+.sassfor-right{
+    float: left;
+    margin-left: 24px;
+    width: 1050px;
+    height:82px;
+    background:rgba(246,246,246,1);
+    border-radius:6px;
+    margin-top: 18px;
+}
+.sassfor-right .sassName{
+    float: left;
+    margin-top: 25px;
+    margin-left:35px ;
+    font-size: 24px;
+    color: #000;
+}
+
+.sassfor-right .sassStatus{
+    float: right;
+    margin-top: 25px;
+    margin-right: 35px;
+    font-size: 18px;
+}
+.sassfor-main{
+    margin-left: 35px;
+    margin-top: 125px;
+}
+.sass-mes p{
+
+     height:18px;
+     font-size:18px;
+     font-family:PingFangSC-Light;
+     font-weight:bold;
+     color:rgba(51,51,51,1);
+     line-height:18px;
+     opacity:0.8;
+ }
+.sass-sco-mon{
+    margin-top: 17px;
+}
+#score-box,#sc-score-box{
+    margin-right: 56px;
+    float: left;
+}
+#score-box .on,#sc-score-box .on{
+    background: url('../../img/myCenter/on.png') no-repeat;
+}
+#score-box div,#sc-score-box div{
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: url('../../img/myCenter/off.png') no-repeat;
+    margin-right: 8px;
+}
+.sass-mon{
+    float: left;
+    font-size:13.5px;
+    color:rgba(51,51,51,1);
+}
+.likes{
+    margin-top: 17px;
+}
+.ff{
+    margin-right: 20px;
+    color: #6E6E6E;
+}
+.rr{
+    margin-right: 10px;
+}
+.timebott{
+    margin-top: 31px;
+}
+.zan{
+    margin-right: 66px;
+    margin-bottom: 30px;
+}
+.zan ul li{
+    float: left;
+    margin-left: 20px;
+}
+
+.morel{
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.pagina{
+    margin-right: 65px;
+    margin-bottom: 22px;
+}
+/*分页*/
+.pagination {
+    position: relative;
+}
+.pagination li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.pagination li a {
+    padding: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    color: #FFFFFF;
+    background:rgba(222,28,49,1);
+    opacity:0.7;
+    border-radius:4px;
+;
+}
+.pagination li a:hover {
+    opacity: 1;
+}
+.pagination li.active a {
+    opacity: 1;
+    color: #fff;
+}
+/********点评结束**********/
+/*  帖子开始   */
+.main-w{
+    padding-top: 43px;
+    padding-left: 43px;
+    padding-right: 66px;
+}
+.tie-left,.sc-left{
+    margin-right: 35px;
+    margin-top: 23px;
+}
+.tabbott,.sc-tab{
+    width: 1014px;
+    border-bottom: 1px solid #DE1C31;
+}
+.tabbott a,.sc-tab a{
+    margin-right: 39px;
+}
+.tabbott a.cur,.sc-tab a.cur{
+    border-bottom: 4px solid #DE1C31;
+}
+.tieinfo{
+    padding-top: 40px;
+    padding-bottom: 24px;
+}
+.pic{
+    margin-right: 33px;
+}
+.txt2 h4{
+    margin:20px 0;
+}
+.txt p{
+    font-size: 22px;
+}
+.txt2 a{
+    display: block;
+    margin-top: 13px;
+}
+/* 帖子结束 */
+
+/*   收藏   */
+.sc-info{
+
+    margin-top: 17px;
+
+
+
+}
+.sc-list{
+    margin-bottom: 10px;
+    background:rgba(246,246,246,1);
+    padding:17px 0px;
+    padding-left: 20px;
+}
+.scll{
+    margin-top: 16px;
+}
+.scllbott{
+    margin-top: 26px;
+}
+.scllbott span{
+    margin-right: 20px;
+}
+.scllbott a{
+    margin-left: 16px;
+
+}
+
+/*    团购    */
+.lists{
+    background:rgba(246,246,246,1);
+    width: 1015px;
+    margin-bottom: 18px;
+    padding :26px;
+}
+.lists a{
+    width: 117px;
+    line-height: 35px;
+    height: 35px;
+    text-align: center;
+    background: #DE1C31;
+    border-radius: 4px;
+}
+.lists h2{
+    margin-top: 12px;
+}
+.lists p{
+    margin-top: 36px;
+}
+.lists span{
+    margin-right: 10px;
+}
+
+
+/*     订单     */
+.tab{
+    width : 1015px;
+    height: 71px;
+    background:rgba(220,220,220,1);
+}
+.tab a{
+    display: inline-block;
+    width: 199px;
+    line-height: 71px;
+    text-align: center;
+}
+.tab a.cur{
+    background: #DE1C31 ;
+    color: #FFFFFF;
+}
+
+
+/*订单一*/
+.indentList{
+    margin-top: 32px;
+    padding-left: 16px;
+    margin-bottom: 28px;
+}
+.oopic{
+    margin-right: 27px;
+}
+.oopic img{
+    width: 181px;
+    height: 156px;
+}
+.ininfo{
+    width: 790px;
+    padding-top: 18px;
+}
+.infl h2{
+
+    margin-bottom: 33px;
+}
+.infl p{
+    margin-bottom: 14px;
+}
+.infr{
+    width: 226px;
+    margin-right: 19px;
+    margin-top: 30px;
+}
+.tab-list{
+    margin-top: 40px;
+    margin-bottom: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
