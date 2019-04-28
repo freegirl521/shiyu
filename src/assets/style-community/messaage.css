@@ -1,0 +1,341 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: rgba(248,248,248,1);
+    /* 取消横向滚动条 */
+    overflow-x: hidden;
+}
+li{
+    list-style-type: none;
+}
+
+.main{
+    width: 1200px;
+    background: #fff;
+    margin:0 auto;
+}
+.main .nav2{
+    width:1200px;
+    height:50px;
+    margin:0 auto;
+    
+}
+.main .nav2 p{
+    width: 106px;
+    font-size: 10px;
+    line-height: 50px;
+    margin-left: 36px;
+    color:#d3d3d3;
+}
+.main .select{
+    background: #fff;
+    width:1200px;
+    margin:0 auto;
+}
+.main .select .head{
+    width:1140px;
+    height: 90px;
+    margin-left:30px;  
+    margin-top:30px;
+    margin-bottom:20px;
+}
+.main .select .head ul{
+    float: left;
+    height:40px;
+    width:1200px;
+    margin-bottom:6px;
+}
+.main .select .head ul li{
+    float: left;
+    /* width:100px; */
+}
+.main .select .head ul .top-left{
+    width:40px;
+    height:40px;
+    margin-left: 20px;
+}
+.main .select .head ul .top-left img{
+    width:40px;
+}
+.main .select .head ul .top-right{
+    margin-left:8px;
+}
+.main .select .head ul .top-right .name{
+    font-size:16px;
+    letter-spacing: 4px;
+}
+.main .select .head ul .top-right .time{
+    font-size: 8px;
+    margin-top:2px;
+}
+.main .select .head .p{
+    clear: both;
+    height: 20px;
+    margin-left: 18px;
+    font-size: 18px;
+    letter-spacing: 8px;
+}
+.main .select .head ol{
+    width:1200px;
+    float: left;
+    margin-left:10px;
+    margin-top:6px;
+
+}
+.main .select .head ol li{
+    float: left;
+    height: 10px;
+    font-size:12px;
+    margin-left: 10px;
+    color:#d3d3d3;
+}
+.main .select .head ol .ts{
+    width:42px;
+    margin-right:-10px;
+}
+.main .select .head ol .t{
+    margin-right:-6px;
+}
+.main .select .box{
+    clear: both;
+    width:1140px;
+    
+    
+}
+.main .select .box ul{
+    width:1140px;
+    
+}
+.main .select .box ul li{
+    width:820px;
+    margin-left:auto;
+    margin-right: auto;
+    /* text-align: center;
+    vertical-align: middle; */
+}
+
+.main .select .box ul li img{
+    width:820px;
+   
+}
+.main .select .box ul li .box-text{
+   
+    text-align: center;
+    vertical-align: middle;
+    margin:20px auto;
+}  
+.main .select .box ul li .box-text p{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+    font-size:14px;
+    color:#d6d6d6;
+    
+}
+.main .select .box .box-bottom{
+    width: 1140px;
+    height:280px;
+    margin:0 auto;
+    border:1px solid #EEEEEE;
+    border-radius:5px;
+    margin-left:30px;
+}
+.main .select .box .box-bottom .bottom-left{
+    float:left;
+}
+.main .select .box .box-bottom img{
+    
+    width:360px;
+    height:240px;
+    margin:20px;
+}
+.main .select .box .box-bottom .bottom-right {
+    width:170px;
+    margin-top:30px;
+    float: left;
+}
+.main .select .box .box-bottom .bottom-right .img{
+    width:100%;
+    margin-top:6px;
+}
+.main .select .box .box-bottom .bottom-right img{
+    width:18px;
+    height:18px;
+    margin:6px;
+}
+.main .select .box .box-bottom .bottom-right .msg{
+    width:200px;
+    margin-top: 4px;
+    font-size:10px;
+}
+.main .select .box .box-bottom .bottom-right .msg p{
+    width:44px;
+    float: left;
+}
+.reply{
+    width:1140px;
+    margin:0 auto;
+  
+    margin-top: 30px;
+    
+}
+.reply .all{
+    width:1124px;
+    height:40px;
+    line-height: 40px;
+    padding-left:16px;
+    margin-bottom:20px;
+    background: #fff;
+  }
+
+  .reply .all span{
+      margin-left:6px;
+  }
+  .reply .reply-all{
+    width:1140px;
+    background: #fff;
+  }
+  .reply .reply-autor{
+    width:1140px;   
+  }
+  .reply .reply-autor .autor-img{
+        float: left;
+        width:36px;
+        height:36px;
+        margin:20px;
+        border:1px dashed #666;
+  }
+  .reply .reply-autor .autor-img img{
+      width:36px;
+      height:36px;
+  }
+  .reply .reply-autor .autor-right{
+  
+      margin-left:77px;
+      border-bottom: 1px solid #f00;
+  }
+  .reply .reply-autor .autor-right p{
+      width:814px;
+      font-size:16px;
+      padding-top:20px;
+  }
+  .reply .reply-autor .autor-right h1{
+      width:814px;
+      font-size:12px;
+      color:#ABABAB;
+      margin-top:4px;
+      margin-bottom:26px;
+  }
+  .reply .reply-autor .autor-right h2{
+    width:814px;
+    /* max-height:50px; */
+    font-size:15px;
+    font-weight:400px;
+    line-height:24px;
+    letter-spacing: 1px;
+    margin-bottom:30px;
+    color:rgba(17,17,17,1);
+    /* 多行文本溢出显示省略号 */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* 对象作为弹性伸缩盒子模型显示  */
+    /* display: -webkit-box; */
+    /* 设置行数 */
+    /* -webkit-line-clamp:2; */
+    /* 设置或检索伸缩盒对象的子元素的排列方式 。 */
+    /* -webkit-box-orient: vertical; */
+   
+  }
+  .reply .reply-autor .autor-right .right-box{
+        width:80px;
+        float: right;
+        margin-top:-128px;
+  }
+  .reply .reply-autor .autor-right .right-box .right-box-bottom{
+        width:80px;
+        margin-right:180px;
+     
+  }
+  .reply .reply-autor .autor-right .right-box .right-box-bottom img{
+        width: 29px;
+        margin-right: 96px;
+        float: right;
+        border:1px dashed #d6d6d6;
+        display: block;
+        margin-top: -13px;
+     
+  }
+
+  .reply .reply-autor .autor-right .right-box .right-box-bottom span{
+        margin-right: 52px;
+        float: right;
+        margin-top: -18px;
+  } 
+  .reply .reply-autor .autor-right .right-box .right-box-show{
+      margin-top:10px;
+     
+  }
+ 
+  .reply .reply-all .paging {
+      margin-top:40px;
+      text-align: center;
+      height:80px;
+      line-height: 80px;
+  }
+  .reply .reply-all .paging input{
+    width:60px;
+    height:30px;
+    border:1px solid rgba(222,28,49,1);
+    border-radius:5px;
+    background: #fff;
+    text-align: center;
+    font-size:12px;
+    margin-left:10px;
+  }
+  .reply .reply-all .paging .num{
+      width:30px;
+      border:1px solid #ABABAB;
+  }
+  .reply .reply-all .paging .jump{
+      background: #FE8F9B;
+  }
+  .reply .answer{
+      width:1140px;
+      height:330px;
+      margin:0 auto;
+      background: #fff;
+      margin-top:40px;
+  }
+  .reply .answer p{
+    width:1140px;
+    height:60px;
+    line-height: 60px;
+    margin-left:21px;
+    color:#f00;
+    font-size:18px;
+  }
+  .reply .answer .answer-content{
+        width:960px;
+        height:160px;
+        margin:0 auto;
+        border:1px solid rgba(171,171,171,1);
+        font-size:14px;
+        border-radius:6px;
+        margin-top:20px;
+        margin-bottom:20px;
+  }
+  .reply .answer h5{
+      width:160px;
+      height:50px;
+      margin-left:892px;
+      border-radius:5px;
+      background: #DE1C31;
+      text-align: center;
+      line-height:50px;
+      letter-spacing: 11px;
+      color:#fff;
+      border:1px solid rgba(171,171,171,1);
+  }
