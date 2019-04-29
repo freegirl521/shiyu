@@ -38,7 +38,7 @@
                                     <router-link to="/centergroup"><li><a href="javascript:;">团购</a></li></router-link>
                                     <!--<router-link to="/dingzuo"><li><a href="javascript:;">订座</a></li></router-link>-->
                                     <router-link to="/centerIndent"><li><a href="javascript:;">订单</a></li></router-link>
-                                    <router-link to="/shezhi"><li><a href="javascript:;">设置</a></li></router-link>
+                                    <router-link to="/member"><li><a href="javascript:;">设置</a></li></router-link>
                                 </ul>
                                 <!--</div>-->
                             </div>
