@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import shopcenter from "../../components/seats/shopcenter.vue"
+    // import shopcenter from "../../components/seats/shopcenter.vue"
     import usernews from "../../components/seats/usernews.vue"
     import userorder from "../../components/seats/userorder.vue"
 
@@ -17,7 +17,7 @@
         },
         components:{
            
-            shopcenter,
+            // shopcenter,
             
         }
     }

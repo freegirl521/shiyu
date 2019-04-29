@@ -1,7 +1,7 @@
 <template>
-    <div class="lists clear" >
+    <div class="lists clear font20" >
         <a href="javascript:;" class="fr">预定失败</a>
-        <h2>西堤厚牛排（北京朝北大悦城店）</h2>
+        <h2 class="font24">西堤厚牛排（北京朝北大悦城店）</h2>
 
         <p>
                             <span>

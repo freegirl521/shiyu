@@ -1,0 +1,47 @@
+import Vue from "vue";
+import vuex from "vuex";
+import list from "./list/"
+import comment from "./comment" 
+import shop from "./shop"
+import communitymessage from "./community/communitymessage.js"
+import community from "./community/community.js"
+import posting from "./community/posting.js"
+import commentDetail from "./commentDetail"
+import storeInformation from "./storeInformation"
+
+
+Vue.use(vuex);
+console.log(list,552)
+export default new vuex.Store({
+    state:{
+        // 页码数据
+        page:{
+            pageIndex:1,// 当前页
+            pageSum:1// 总页数
+        },
+},
+mutations:{
+    CHANGE_PAGE(state,page){
+        console.log(2222222);
+        //state.page.pageIndex = page.pageIndex;
+        state.page.pages = page;
+    },
+    },
+    getters:{
+
+    },
+    actions:{
+        
+    },
+
+	modules:{
+        list,
+        comment,
+        shop,
+        community,
+        communitymessage,
+        posting,
+        commentDetail,
+        storeInformation
+	}
+})

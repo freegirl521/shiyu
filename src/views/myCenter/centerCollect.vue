@@ -1,9 +1,9 @@
 <template>
-    <div class="main-w">
+    <div class="main-w clear">
         <div class="modebox clear">
-            <span class="sc-left fl">收藏</span>
+            <span class="sc-left fl font24">收藏</span>
             <div class="tabs fl" id="scchange">
-                <div class="sc-tab">
+                <div class="sc-tab font24">
                     <a href="javascript:;" :class="{cur:index===0}" @click="index=0" >收藏商户</a>
                     <a href="javascript:;" :class="{cur:index===1}" @click="index=1" >收藏榜单</a>
                     <a href="javascript:;" :class="{cur:index===2}" @click="index=2" >收藏帖子</a>
@@ -11,24 +11,10 @@
                 </div>
                 <div class="sc-info">
                     <div v-if="index===0" class="clear">
-                        <collectTem v-for="item in this.pageInfo.list" :key="item.id" :list="item"></collectTem>
-                        <div class="sc-list">
-                            <h2>酒井日本寿司</h2>
-                            <div class="scll">
-                                <div id="score-box">
-                                    <!--<div v-for="n in 5" @mouseenter="enter(n)" @mouseleave="leave()" @click="Selected(n)" :class="{'on':cur>=n}"></div>-->
-                                </div>
-                                <p>[北京]酒仙桥路北京798艺术区751时尚设计广场A11楼56181908</p>
-                            </div>
-                            <div class="scllbott">
-                                <span>03-28 14:35</span>
-                                <span>收藏</span>
-                                <span>|</span>
-                                <a href="javascript:;" class="red">编辑</a>
-                                <a href="javascript:;" class="red">删除</a>
-                            </div>
+                        <collectTem v-for="(item,index) in $store.state.myCenter.pageInfo_coll.list" :key="index" :list="item"></collectTem>
+                       <!-- <page-center class="pagina fr" :page-coll="$store.state.myCenter.pageInfo_coll"></page-center>-->
                         </div>
-                    </div>
+
                     <div v-if="index===1" class="clear">
                         <div class="pic fl">
                             <img :src="src1">
@@ -66,16 +52,18 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
-    import collectTem from "./collectTem"
+    import collectTem from "../../components/myCenter/collectTem"
+    import pageCenter from "../../components/myCenter/pageCenter"
     export default {
         name: "centerCollect",
         data(){
             return {
                 index:0,
-                src1:require("../assets/img/myCenter/tiepic.png"),
+                src1:require("../../assets/img/myCenter/tiepic.png"),
                 pageInfo:{
                     pageNum:1,//当前页
                     pageSize:5,//每页的数量
@@ -112,7 +100,10 @@
         }
         },
         components:{
-            collectTem,
+            collectTem,pageCenter
+        },
+        mounted (){
+          this.$store.dispatch("getCollect")
         }
     }
 </script>

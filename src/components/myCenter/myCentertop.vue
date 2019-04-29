@@ -35,14 +35,14 @@
 </template>
 
 <script>
-    import "../assets/css/myCenter/userInfo.css"
+    import "../../assets/css/myCenter/userInfo.css"
     export default {
         name: "myCentertop",
         data(){
             return {
                /* */
                 userName:"好多鱼",
-                userImg :require("../assets/img/myCenter/0190408154642.jpg")
+                userImg :require("../../assets/img/myCenter/0190408154642.jpg")
 
             }
 

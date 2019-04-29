@@ -152,7 +152,6 @@ a{
     z-index: 90;
     padding: 5px 0;
 
-<<<<<<< HEAD
 }
 .nav .navGoods .boxx .listBottom .share .soft ul li{
     width: 50%;
@@ -161,16 +160,6 @@ a{
     padding: 0;
     line-height: 30px;
 }
-=======
-}
-.nav .navGoods .boxx .listBottom .share .soft ul li{
-    width: 50%;
-    overflow: hidden;
-    height: 30px;
-    padding: 0;
-    line-height: 30px;
-}
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
 .nav .navGoods .boxx .listBottom .share .soft li a .wb{
     background :url("../../img/store_information/jpg.png") no-repeat left 0 top 52px;
     width: 18px;
@@ -353,11 +342,7 @@ a{
 }
 .nav .navGoods .right #rushing{
     width: 112px;
-<<<<<<< HEAD
     height: 40px;
-=======
-    height: 30px;
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
     background-color: #DE1C31;
     border-radius: 10px;
     margin-top: 13px;
@@ -694,26 +679,17 @@ a{
     margin: 0 auto;
     background-color: #fff;
 }
-<<<<<<< HEAD
 /* h2{
     font-size: 20px;
 } */
-=======
-h2{
-    font-size: 20px;
-}
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
 .container .closee{
     background-color: #EBEBEB;
     width: 1084px;
     height: 77px;
 }
-<<<<<<< HEAD
 .rob .shop .el-dialog__wrapper .el-dialog .el-dialog__body{
     padding: 0;
   }
-=======
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
 .container .closee .page-header{
     padding: 28px 42px;
     display: inline-block;
@@ -766,37 +742,6 @@ h2{
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
     text-align: center;
-<<<<<<< HEAD
-=======
-}
-.container .shopCart-bottom{
-    margin: 250px 18px 42px 826px ;
-    height: 20px;
-}
-.container .shopCart-bottom .rushing{
-    width: 112px;
-    height: 30px;
-    background-color: #DE1C31;
-    border-radius: 10px;
-    display: inline-block;
-}
-.container .shopCart-bottom .rushing span{
-    display: block;
-    width: 72px;
-    height: 18px;
-    color: #fff;
-    margin: 0 20px;
-    padding: 5px 0;
-}
-#el-popover-1284{
-    top:2589px !important;
-    left: 33px !important;
-}
-.shop .el-dialog__wrapper .el-dialog{
-    width: 1124px !important;
-    height: 482px !important;
-    overflow: hidden;
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
 }
 .container .shopCart-bottom{
     width: 400px;

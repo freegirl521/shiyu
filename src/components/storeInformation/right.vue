@@ -74,12 +74,9 @@
                 console.log(value);
             }
         },
-<<<<<<< HEAD
          components:{
             snapUp
         }
-=======
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
     }
 </script>
 

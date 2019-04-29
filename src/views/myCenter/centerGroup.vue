@@ -1,7 +1,7 @@
 <template>
     <div class="main-w">
         <div class="modebox clear">
-            <span class="sc-left fl">团购</span>
+            <span class="sc-left fl font24">团购</span>
             <div class="groupList fl">
                <group-tem></group-tem>
                 <div class="lists clear">
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import groupTem from "./groupTem"
+    import groupTem from "../../components/myCenter/groupTem"
     export default {
         name: "centerGroup",
         data(){

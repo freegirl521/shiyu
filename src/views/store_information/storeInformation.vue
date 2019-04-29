@@ -3,11 +3,7 @@
     <div class="nav">
         <div class="navGoods">
             <div class="boxx" >
-<<<<<<< HEAD
                  <shuffling></shuffling>
-=======
-                 <boxx></boxx>
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
                  <div class="listBottom">
                             <div class="star">
                                 <ul>
@@ -32,18 +28,9 @@
                                     <li><a title="分享到豆瓣"><i class="wb"></i>豆瓣</a> </li>
                                 </ul> -->
                             </div>
-<<<<<<< HEAD
                             <div class="date">
                                     <countdown :endTime='endTime'></countdown>
                             </div>
-=======
-                            <!-- <div class="er"></div> -->
-                            <div class="date">
-                                    <!-- <countdown :endTime='endTime'></countdown> -->
-                                   
-                            </div>
-                                <countIdown></countIdown> 
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
                         </div>
             </div>
                 <right></right>
@@ -65,13 +52,8 @@
                 
             <div class="bulkls" id="bulk"> 
                 <div class="shopImg">
-<<<<<<< HEAD
                     <!-- <img :src=$store.state.storeInformation.succes.shopImg[0]>  -->
                     <!-- {{$store.state.storeInformation.succes.shopImg}} -->
-=======
-                    <img :src=$store.state.storeInformation.succes.shopImg> 
-                    {{$store.state.storeInformation.succes.shopImg}}
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
                     <!-- <img src="../../assets/img/store_information/u=3600432712,3894872089&fm=26&gp=0@2x.png"> -->
                 </div>
                 <div class="content">
@@ -145,13 +127,6 @@
                         <span class="dishName">{{item.dishName}}</span>
                         <span class="foodPrice">{{item.foodPrice}}</span>/<span>份</span>
                     </div>
-<<<<<<< HEAD
-=======
-                    <!-- <div class="dish all">
-                        <span class="dishName">牛油果袋</span>
-                        <span class="foodPrice">88</span>/<span>份</span>
-                    </div> -->
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
                 </div>
             </div>
            <div class="notess" id="notes">
@@ -187,12 +162,7 @@
             <div class="rob">
                 <!-- <div class="rushing"> -->
                     <!-- <span>立即抢购</span> -->
-<<<<<<< HEAD
                     <snapUp></snapUp>
-=======
-                    
-                     <shopCartt></shopCartt>
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
                 <!-- </div> -->
                 <div class="prices">
                         <div class="proPrices">
@@ -236,7 +206,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
     import "../../assets/style/css/detail.css"
     import "../../assets/style/css/font/iconfont.css"
     import countdown from "../../components/storeInformation/countdown.vue"
@@ -244,17 +213,6 @@
     import right from "../../components/storeInformation/right.vue"
     import snapUp from "../../components/storeInformation/snapUp.vue"
     
-=======
-
-    // import countdown from "../../components/storeInformation/countdown.vue"
-    // import modalDialong from "../../components/storeInformation/modalDialog.vue"
-     import countIdown from "../../components/storeInformation/countIdown.vue"
-    import boxx from "../../components/storeInformation/boxx.vue"
-    import right from "../../components/storeInformation/right.vue"
-    import shopCart from "../../components/storeInformation/shopCart.vue"
-    import shopCartt from "../../components/storeInformation/shopCartt.vue"
-
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
     export default {
         name:"storeInformation",
         data() {
@@ -288,7 +246,6 @@
             //第一个参数是actions的方法名,第二个参数是路由传过来的店铺ID     DOM加载完成执行的方法
             //this.$route.query.shopid
             this.$store.dispatch("getInfo",1);
-<<<<<<< HEAD
             // this.$store.dispatch("getInfo",this.$route.query.shopId);
         },
 
@@ -297,19 +254,6 @@
             shuffling,
             right,
             snapUp
-=======
-        },
-
-        //countdown倒计时
-        components:{
-            // countdown
-            // modalDialong
-            countIdown,
-            boxx,
-            right,
-            shopCart,
-            shopCartt
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
         }
   }
 </script>

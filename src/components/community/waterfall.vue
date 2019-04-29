@@ -44,11 +44,11 @@
 // )
 
 window.onload=function(){
-warterFall('#waterfall');
+// warterFall('#waterfall');
 }
 //onresize : 浏览器窗口尺寸改变事件.
 window.onresize = function(){
-    warterFall('#waterfall');
+    // warterFall('#waterfall');
 }
 function warterFall(ele,child,space){
     //1. 初始化参数

@@ -9,8 +9,6 @@ export default{
         // //购买数量
         // num:1,
         // 
-<<<<<<< HEAD
-     
         succes:{
             // proPrices : "99",
             // resName:"海底捞",
@@ -30,32 +28,10 @@ export default{
             // 　　proPrices: '129'
             
             }],
-=======
-        succes:{
-            proPrices : "99",
-            resName:"海底捞"
-        },
-        shop:{
-            proPrices : "99",
-            resName:"海底捞"
-        }
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
-    },
-    mutations:{
-        SHOREINFORMATION(state,succes){
-            state.succes=succes;
-<<<<<<< HEAD
-        },
-        SHOREINFORMATIONONE(state,cart_list){
-            state.cart_list=cart_list;
-=======
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
-        }
     },
     getters:{
 
     },
-<<<<<<< HEAD
     actions:{
         //展示接口
         //commit 是提交mutations中的SHOREINFORMATION方法修改state中的succes数据
@@ -85,17 +61,6 @@ export default{
             .then(({data})=>{
                 console.log(data);
                 commit("SHOREINFORMATIONONE",data.cart_list);
-=======
-    actions:{//异步操作
-        //展示接口
-        getInfo({commit},shopId){
-            axios.post("/shiyu/test",{
-                id:shopId
-            })
-            .then(({data})=>{
-                console.log(data);
-                commit("SHOREINFORMATION",data.succes);
->>>>>>> 8dc41066c3e0c9eb88dd395eda5b33cb9ff05f47
             })
         }
     }

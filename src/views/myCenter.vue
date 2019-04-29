@@ -10,10 +10,10 @@
 </template>
 
 <script>
-    import myCentertop from "../components/myCentertop"
-    import myCenterWrapper from "../components/myCenterWrapper"
-    // import "../assets/css/myCenter/common.css"
-    import  "../assets/css/myCenter/userInfo.css"
+    import myCentertop from "../../components/myCentertop"
+    import myCenterWrapper from "../../components/myCenterWrapper"
+    import "../../assets/css/myCenter/common.css"
+    // import  "../assets/css/myCenter/"
     export default {
         /*name: "myCenter",*/
         components:{

@@ -30,15 +30,15 @@
                             <!--导航start-->
                             <div class="tabs-box clear">
                                 <!--<div class="tab-nav">-->
-                                <ul>
-                                    <li><a href="javascript:;"><router-link to="/centerIndex">首页</router-link></a></li>
-                                    <li><a href="javascript:;"><router-link to="/centerComment">点评</router-link></a></li>
-                                    <li><a href="javascript:;"><router-link to="/centerCollect">收藏</router-link></a></li>
-                                    <li><a href="javascript:;"><router-link to="/centerPosts">帖子</router-link></a></li>
-                                    <li><a href="javascript:;"><router-link to="/centergroup">团购</router-link></a></li>
-                                    <li><a href="javascript:;"><router-link to="/"></router-link>订座</a></li>
-                                    <li><a href="javascript:;"><router-link to="/centerIndent">订单</router-link></a></li>
-                                    <li><a href="javascript:;"><router-link to="/">设置</router-link></a></li>
+                                <ul class="clear">
+                                    <router-link to="/centerIndex"><li >首页</li></router-link>
+                                    <router-link to="/centerComment"><li>点评</li></router-link>
+                                    <router-link to="/centerCollect"><li><a href="javascript:;">收藏</a></li></router-link>
+                                    <router-link to="/centerPosts"><li><a href="javascript:;">帖子</a></li></router-link>
+                                    <router-link to="/centergroup"><li><a href="javascript:;">团购</a></li></router-link>
+                                    <!--<router-link to="/dingzuo"><li><a href="javascript:;">订座</a></li></router-link>-->
+                                    <router-link to="/centerIndent"><li><a href="javascript:;">订单</a></li></router-link>
+                                    <router-link to="/shezhi"><li><a href="javascript:;">设置</a></li></router-link>
                                 </ul>
                                 <!--</div>-->
                             </div>
@@ -52,13 +52,13 @@
 </template>
 
 <script>
-    import "../assets/css/myCenter/userInfo.css"
+    import "../../assets/css/myCenter/userInfo.css"
     export default {
         name: "myCenterWrapper",
         data(){
                 return {
                     userName:"好多鱼",
-                    userImg :require("../assets/img/myCenter/0190408154642.jpg"),
+                    userImg :require("../../assets/img/myCenter/0190408154642.jpg"),
                     cur : -1,
                     flag : false //鼠标点击后变成true，鼠标进入进出事件就不会改变背景图
                 }
@@ -87,6 +87,14 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .router-link-active{
+        li{
+            background: #DE1C31;
+            color: white;
+        }
+
+    }
+
 
 </style>

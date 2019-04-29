@@ -1,7 +1,7 @@
 <template>
     <div class="main-w">
-        <div class="modebox clear">
-            <span class="sc-left fl" >订单</span>
+        <div class="modebox clear font20">
+            <span class="sc-left fl font24" >订单</span>
             <div class="tabs fl" id="indent">
                 <div class="tab">
                     <a href="javascript:;" :class="{cur:index===0}" @click="index=0" >全部订单</a>
@@ -13,18 +13,10 @@
                 </div>
                 <div class="tab-list">
                     <div v-if="index===0" class="clear">
-                        <ident-tem v-for="item in this.pageInfo.list" :key="item.id" :list="item"></ident-tem>
+                        <ident-tem v-for="item in $store.state.myCenter.pageInfo_indent.list" :key="item.id" :list="item"></ident-tem>
                     </div>
                     <div v-if="index===1" class="clear">
-                        <div class="pic fl">
-                            <img :src="src2">
-                        </div>
-                        <div class="txt2 fl">
-                            <h4>没有待付款的订单哦</h4>
-                            <p>您还没有下订单~
-                                <a href="#" class="red">赶快去下订单吧>></a>
-                            </p>
-                        </div>
+                       <indet-center-nu :pic="src2"></indet-center-nu>
                     </div>
                     <div v-if="index===2" class="clear">
                         <div class="pic fl">
@@ -67,13 +59,14 @@
 </template>
 
 <script>
-    import identTem from "./identTem"
+    import identTem from "../../components/myCenter/identTem"
+    // import indetCenterNu from "../../components/myCenter/identCenterNu"
     export default {
         name: "centerIndent",
         data(){
             return {
                 index:0,
-                src2:require("../assets/img/myCenter/tiepic.png"),
+                src2:require("../../assets/img/myCenter/tiepic.png"),
                 pageInfo:{
                     pageNum:1,//当前页
                     pageSize:5,//每页的数量
@@ -99,7 +92,12 @@
         },
         components:{
             identTem,
+            // indetCenterNu,
+        },
+        mounted(){
+            this.$store.dispatch("getIndent")
         }
+
     }
 </script>
 
