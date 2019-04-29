@@ -1,5 +1,5 @@
 {
-  "name": "shiyusa",
+  "name": "shiyu",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,16 +7,27 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
     "element-ui": "^2.7.2",
+<<<<<<< HEAD
     "lodash": "^4.17.11",
+=======
+    "http-proxy-middleware": "^0.19.1",
+    "less": "^3.9.0",
+>>>>>>> 7d61403b14594c40d7c26eb6a661f0a0160d2836
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.6.0",
     "axios": "^0.18.0",
+<<<<<<< HEAD
     "express": "^4.16.4",
     "request": "^2.88.0",
+=======
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+>>>>>>> 7d61403b14594c40d7c26eb6a661f0a0160d2836
     "vue-template-compiler": "^2.5.21",
     "vuex": "^3.1.0"
   }
