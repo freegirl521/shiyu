@@ -134,6 +134,7 @@
 				this.$store.dispatch("choice",obj)
 			},
 			sp(){
+				/* this.spa = true; */
 				this.spa = !this.spa
 				let obj = this.$store.state.list.req
 				obj.sortType = this.sortType

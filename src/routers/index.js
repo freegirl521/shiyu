@@ -12,14 +12,14 @@ import order from "../views/order/order.vue"
 //赵丽云页面路由
 import storedetail from "../views/store_details/storedetail.vue"
 // 慕晶晶页面路由
-import communitymessage from "../views/communitymessage.vue"
-import community from "../views/community.vue"
-import posting from "../views/posting.vue"
+import communitymessage from "../views/community/communitymessage.vue"
+import community from "../views/community/community.vue"
+import posting from "../views/community/posting.vue"
 // 魏玉兰页面路由
 import comment from "../views/comment/comment.vue"
 import shopcenter from "../views/shopcenter/shopcenter.vue"
 //刘合芝页面路由
-import storeInformation from "../views/store_information/storeInformation.vue"
+// import storeInformation from "../views/store_information/storeInformation.vue"
 //李凤燕页面路由
 import listapp from "../views/menu/listapp.vue"
 // 艾鑫页面路由
@@ -31,7 +31,8 @@ import centerGroup from "../views/myCenter/centerGroup"
 import centerIndent from "../views/myCenter/centerIndent"
 import centerIndex from "../views/myCenter/centerindex"
 import centerComment from "../views/myCenter/centerComment"
-
+//慕莹哲的页面
+import index from '../views/index/index.vue'
 
 Vue.use(Router)
 
@@ -39,7 +40,12 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-   
+    //慕莹哲
+    {
+      path: '/index',
+      name: 'index',
+      component:index,
+    },
     {
       path: '/',
       name: 'home',
@@ -114,7 +120,7 @@ export default new Router({
           //   name:"shopcenter",
           //   component:shopcenter
           // },
-        //   刘合枝路径设置
+          // 刘合枝路径设置
         {
             path:"/storeInformation",
             name:"storeInformation",

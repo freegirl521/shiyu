@@ -1,6 +1,6 @@
 <template>
 	<div class="biglist">
-		<!-- {{$store.state.list.listtype.pageInfo.list}} -->
+		<!-- {{$store.state.list.listtype}} -->
 		<!-- t -->
 	<template>
 	<div class="list" v-for="(item,index) in (!!$store.state.list.listtype.pageInfo ? $store.state.list.listtype.pageInfo.list : [])" :key="index">

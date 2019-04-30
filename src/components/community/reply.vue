@@ -114,7 +114,7 @@ methods:{//加载
 }
 </script>
 
-<style>
+<style scoped>
 .el-textarea__inner{
     height:160px;
 }
