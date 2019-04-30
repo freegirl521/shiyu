@@ -7,7 +7,7 @@
           <h3>{{ item }}</h3>
         </el-carousel-item>
         </el-carousel>
-       
+       <!-- $store.state.storeInformation.succes. -->
     </div>
     
 </template>
@@ -44,7 +44,7 @@
   .el-carousel__item:nth-child(3) {
     background:url("../../assets/img/store_information/timg (1)@2x.png") no-repeat !important;
   } */
- 
+
   .shuffling .el-carousel__indicator .el-carousel__button{
      width: 133px !important;
     height: 91px !important;

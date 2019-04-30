@@ -339,6 +339,8 @@ a{
     background-color: #DE1C31;
     border-radius: 10px;
     margin-top: 13px;
+    color: #333;
+    line-height: 30px;
 }
 .nav .navGoods .right #rushing{
     width: 112px;
@@ -574,7 +576,8 @@ a{
     height: 375px;
 }
 .present .presentm .notess .notesOne{
-    width: 88px;
+    line-height: 2px;
+    width: 102px;
     height: 22px;
     color: #333;
     font-size: 22px;
@@ -608,7 +611,7 @@ a{
     height: auto;
 }
 .present .presentm .introduce .introduceOne{
-    width: 88px;
+    width: 102px;
     height: auto;
     color: #333;
     font-size: 22px;
@@ -645,8 +648,9 @@ a{
     background-color: #DE1C31;
     border-radius: 10px;
     margin: 56px 45px 68px 36px;
-    /* line-height: 38px; */
+    line-height: 30px;
     display: inline-block;
+    color: #333;
 }
 .present .presentm .rob .rushing span{
     width: 72px;
@@ -673,56 +677,57 @@ a{
 .present .presentm .rob .buy-bottom-tab table{
     border-collapse: separate;
 }
-.container{
+
+/* h2{
+    font-size: 20px;
+} */
+.container1{
     width: 1124px;
     height: 405px;
     margin: 0 auto;
     background-color: #fff;
 }
-/* h2{
-    font-size: 20px;
-} */
-.container .closee{
+.rob .shop .el-dialog__wrapper .el-dialog .el-dialog__body{
+    padding: 0;
+}
+.container1 .closee{
     background-color: #EBEBEB;
     width: 1084px;
     height: 77px;
 }
-.rob .shop .el-dialog__wrapper .el-dialog .el-dialog__body{
-    padding: 0;
-  }
-.container .closee .page-header{
+.container1 .closee .page-header{
     padding: 28px 42px;
     display: inline-block;
 }
-.container .closee .close{
+.container1 .closee .close{
     float: right;
     width: 41px;
     height: 41px;
     padding: 18px 34px;
     display: inline-block;
 }
-.container .table tr th{
+.container1 .table tr th{
     text-align: left;
     height: 56px;
     border-bottom: #999;
 }
-.container .table tr td{
+.container1 .table tr td{
     text-align: left;
     height: 56px;
 }
-.container .table tr th:first-child{
+.container1 .table tr th:first-child{
     padding-left: 75px;
 }
-.container .table tr td:first-child{
+.container1 .table tr td:first-child{
     padding-left: 75px;
 }
-.container .table tr .col-xs-3 .border{
+.container1 .table tr .col-xs-3 .border{
     width: 74px;
     height: 21px;
     display: inline-block;
     margin-left: 18px;
 }
-.container .table tr .col-xs-3 .border .btn-default{
+.container1 .table tr .col-xs-3 .border .btn-default{
     float: left;
     display: block;
     width: 17px;
@@ -734,7 +739,7 @@ a{
     line-height: 19px;
     
 }
-.container .table tr .col-xs-3 .border .item_num{
+.container1 .table tr .col-xs-3 .border .item_num{
     float: left;
     width: 36px;
     height: 19px;
@@ -743,22 +748,22 @@ a{
     border-bottom: 1px solid #d9d9d9;
     text-align: center;
 }
-.container .shopCart-bottom{
+.container1 .shopCart-bottom{
     width: 400px;
     margin: 164px 18px 42px 780px;
     height: 30px;
 }
-.container .shopCart-bottom .span{
+.container1 .shopCart-bottom .span{
     display: inline-block;
 }
-.container .shopCart-bottom .rushing{
+.container1 .shopCart-bottom .rushing{
     width: 112px;
     height: 30px;
     background-color: #DE1C31;
     border-radius: 10px;
     display: inline-block;
 }
-.container .shopCart-bottom .rushing span{
+.container1 .shopCart-bottom .rushing span{
     display: block;
     color: #fff;
     margin: 0 20px;
