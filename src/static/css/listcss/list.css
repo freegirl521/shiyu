@@ -10,9 +10,7 @@ body{font:12px "微软雅黑";}
 .clear:after{content:"."; display:block; clear:both; height:0; visibility:hidden;}
 .fl{float:left;}
 .fr{float:right;}
-body{
-	background:rgba(248,248,248,1);
-}
+
 /* .nav-food{
 	width: 100%;
 	min-height: 50px;
@@ -169,13 +167,14 @@ body{
 } */
 .choice .choice1 .tg span{
 	width:45px;
-	height: 14px;
+	height: 18px;
 	color: #ABABAB;
 	/* background: #EEE8AA; */
 	display: inline-block;
 	font-size: 14px;
-	margin-top: 7px;
-	margin-left:5px;
+	margin-top: -22px;
+	margin-left:41px;
+	float: left;
 }
 .choice .choice1 ul{
 	/* background: #DE1C31; */
@@ -227,8 +226,8 @@ body{
 .choice .choice1 .sort a img{
 	width: 26px;
 	height: 12px;
-	margin-top: 35px;
-	margin-left: 5px;
+	margin-top: -42px;
+	margin-left: 127px;
 }
 .choice .choice1 .aver{
 	width: 88px;
@@ -245,13 +244,12 @@ body{
 .choice .choice1 .aver a img{
 	width: 26px;
 	height: 12px;
-	margin-top: 35px;
-	margin-left: 5px;
+	margin-top: -45px;
+	margin-left: 59px;
 }
 .list{
 	width:100%;
-	height: 240px;
-	
+	height: 240px;	
 	margin-top:20px;
 }
 .list .list1{
@@ -436,4 +434,18 @@ body{
 	font-size: 16px;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+.el-pagination.is-background .btn-prev{
+	width: 30px;
+	height: 30px;
+}
+.el-pagination.is-background .btn-next{
+	width: 30px;
+	height: 30px;
+}
+.el-pagination.is-background .el-pager li {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
 }
