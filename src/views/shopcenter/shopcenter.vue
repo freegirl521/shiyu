@@ -227,37 +227,38 @@
 						<div class="shop-content">
 							<div class="content-class">优惠&团购</div>
 							<template>
-								<div>
+								<div >
+									<div v-for="(item,index) in $store.state.shop.discountList" :key=index>
 									<div style="overflow: hidden;margin-bottom: 10px">
 										<div class="discount">
 											<p class="discount_name">代金券1张</p>
-												<p class="discount_price">￥90.00 <del>￥100.00</del></p>
-												<p class="discount_num">已售62183</p>
+												<p class="discount_price">￥{{item.now }}<del>￥{{item.was}}</del></p>
+												<p class="discount_num">已售{{item.num}}</p>
 										</div>
 										<div class="modify">
-											<button class="btnDel">删除</button>
-											<button>修改</button>
+											<button class="btnDel" @click="delDiscount(item.discountId)">删除</button>
+											<button >修改</button>
 										</div>
 									</div>
+									
 									<div class="remind">
 										<h4 style="font-size: 16px">购买须知</h4>
 										<div style="font-size: 12px;line-height: 18px">
-											<p>有效期 2019.04.04 至 2019.05.04（周末、法定节假日通用)</p>
-											<p> 使用时间 11:30-14:00   </p>
-											使用规则无需预约，消费高峰期可能需要等位，商家提供免费WiFi，停车位收费标准，使用规则无需预约，消费高峰期可能需要等位，商家提供免费WiFi，停车位收费标准
-											使用规则无需预约，消费高峰期可能需要等位，商家提供免费WiFi，停车位收费标准，使用规则无需预约，消费高峰期可能需要等位，商家提供免费WiFi，停车位收费标准
-											使用规则无需预约，消费高峰期可能需要等位，商家提供免费WiFi，停车位收费标准
+											<p>有效期 {{item.startTime}} 至{{item.endTime}}（周末、法定节假日通用)</p>
+											<p> 使用时间 {{item.useTime}}</p>
+										{{item.content}}
 										</div>
+									</div>
 									</div>
 									<div style="overflow: hidden;margin-bottom: 10px">
 										<div class="discount">
 											<p class="discount_name">代金券1张</p>
-											<p class="discount_price discount_input" ><input style="width: 145px;" type="text" placeholder="￥XX.XX"/><input class="price_was" type="text" placeholder="￥xx.xx"></p>
+											<p class="discount_price discount_input" ><input style="width: 145px;" type="text" placeholder="￥XX.XX" v-model="now"/><input class="price_was" type="text" placeholder="￥xx.xx" v-model="was"></p>
 											<p class="discount_num">已售0</p>
 										</div>
 										<div class="modify">
-											<button class="btnDel">确定</button>
-											<button>清空</button>
+											<button class="btnDel" @click="addDiscount">确定</button>
+											<button @click="clear">清空</button>
 										</div>
 									</div>
 									<div class="remind_edit">
@@ -294,7 +295,30 @@
 				</el-tab-pane>
 				<el-tab-pane name="fourth">
 					<span slot="label"><i><img src="../../assets/img/comment_shopcenter/shopcenter4.png"></i> 基本信息&订座</span>
-					基本信息&订座
+				
+					<!--基本信息&订座-->
+					<div class="shop-wrap">
+					<div class="shop-content">
+							<div class="content-class">	基本信息&订座</div>
+							<shoporder></shoporder>
+								<div class="footer">
+								<!-- <span>首页</span><span>上一页</span><i>1/2</i><span>下一页</span><span>末页</span>
+								<input class="page" type="text" /> 
+								<span class="jump">跳转</span> -->
+								<!-- 分页 -->
+								<el-pagination
+									@current-change="handleCurrentChange"
+									:current-page.sync="currentPage"
+									:page-size="100"
+									layout="prev, pager, next, jumper"
+									:total=$store.state.page.pageSum
+									prev-text="上一页"
+									next-text="下一页"
+									>
+								</el-pagination>
+							</div>
+					</div>
+					</div>
 				</el-tab-pane>
 				<!-- 左边底部的设置 -->
 				<el-tab-pane>
@@ -316,6 +340,7 @@
 	import "../../assets/style/public.css";
 	import "../../assets/style/shopcenter.css";
 	import dialog from "../../components/shopcenter/dialog.vue";
+	import shoporder from "../../components/seats/shoporder.vue";
 	export default {
 		name:"shopcenter",
 		data() {
@@ -328,6 +353,8 @@
 				isShow:-1,
 				activeName: 'first',
 				tabPosition: 'left',
+				now:'',
+				was:'',
 				tags: [
 					{ name: '标签一', type: '' },
 					{ name: '标签二', type: 'success' },
@@ -443,11 +470,32 @@
 			handleCurrentChange(val) {
 				//console.log(`11111当前页: ${val}`); 
 				this.$store.dispatch("getShopInfo",val);
-			}
+			},
+			delDiscount(discountId){
+      this.$store.dispatch("delDiscount",{shopId:localStorage.shopId,discountId,});
+      this.$store.dispatch("getDiscount",localStorage.shopId);
+			},
+			updateDiscount(discountId,now,was){
+      this.$store.dispatch("updateDiscount",{shopId:localStorage.shopId,discountId,});
+      this.$store.dispatch("getDiscount",localStorage.shopId);
+	},
+	addDiscount(){
+		console.log(this.now,this.was);
+		this.$store.dispatch("addDiscount",{now:this.now,was:this.was,remind:this.textarea});
+		 this.$store.dispatch("getDiscount",localStorage.shopId);
+	},
+	clear(){
+			this.now='';
+			this.was='';
+	}
 		},
 		mounted() {
 		this.$store.dispatch("getShopInfo",this.pageIndex);
-    	}
+		 this.$store.dispatch("getDiscount",localStorage.shopId);
+			},
+			components:{
+				shoporder,
+			}
   	}  
 </script>
 
@@ -552,7 +600,7 @@
 		padding-top:20px;
 		color:#333;
 		/*//border-left: 1px solid #DE1C31;*/
-		border-right: 1px solid #DE1C31;
+	
 		background: url("../../assets/img/comment_shopcenter/discount.png")no-repeat;
 	}
 	.discount_name{

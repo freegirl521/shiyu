@@ -7,6 +7,7 @@ Vue.use(vuex)
 export default {
     state:{
         commentList:[],
+        page:[]
     },
     mutations:{
         GETLIST(state,list){
@@ -17,17 +18,22 @@ export default {
     
     },
     actions:{
-        getList({commit},keyword){
-            axios.get("/comment/selectStores",{
-                params:{
-                    keyword
-                }
-            }).then(({data})=>{
-                commit("GETLIST",data)
+        getList({commit},obj){
+            console.log(obj,808070);
+
+            axios.post("/sys/comment/list",
+            {   keyword:obj.keyword,
+                pageIndex:obj.pageIndex}
+             )
+            .then(({data})=>{
+                commit("GETLIST",data.rows)
+                commit("CHANGE_PAGE",data.pages)
+                console.log(data)
             })
         },
+        // 点击获取菜单/sys/comment/menu
         send({commit},context){
-            axios.post("/insertCommentDetails",context).then(({data})=>{
+            axios.post("/sys/comment/insert",context).then(({data})=>{
                 if(data.ok===1){
                     alert("提交成功");
                 }
@@ -35,7 +41,8 @@ export default {
             })
         },
         getAdminLog({commit},pageIndex){
-           axios.get("/comment/selectStores",{
+     
+       axios.get("/comment/selectStores",{
                 params:{
                     pageIndex,
                     keyword

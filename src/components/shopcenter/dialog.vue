@@ -118,12 +118,6 @@
     .food_info input{
         border:1px solid rgba(222,28,49,1);
     }
-    .active{
-
-
-    }
-
-
     .food_price{
         width: 60px;
         text-align: center;
