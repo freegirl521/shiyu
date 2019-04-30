@@ -106,7 +106,7 @@
                 </div>
                 <div class="moreReviews" @click="getmore">
                         更多点评(<i>{{$store.state.commentDetail.shopComments[0].comments}}</i>)
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -148,7 +148,7 @@
             },
             two(){
                 // this.scoreid=this.radio;
-                console.log(222222222222222,this.radio);
+                // console.log(222222222222222,this.radio);
                 this.$store.dispatch("getShopComment",{text:this.test,shopid:13,scoreid:this.radio,count:3});
             },
             getmore(){

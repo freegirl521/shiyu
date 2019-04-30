@@ -67,7 +67,7 @@
                             <a href="#anchorPoint" class="write">写点评</a>
                             <!-- <span class="write">写点评</span> -->
                             <p class="book">
-                                <img src="../../assets/img/store_details/reserve@2x.png">
+                                <img class="reservation" src="../../assets/img/store_details/reserve@2x.png">
                                 <span v-show="$store.state.commentDetail.shopInfo.shopmanage === 0">提前订座</span>
                                 <span v-show="$store.state.commentDetail.shopInfo.shopmanage === 1">停止订座</span>
                                 <i>{{$store.state.commentDetail.shopInfo.usercount}}</i>
