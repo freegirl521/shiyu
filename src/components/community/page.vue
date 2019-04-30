@@ -1,14 +1,13 @@
 <template>
    
-	<div class="pagination" disabled="true">
+	<div class="pagination" >
         <el-pagination
-           
             prev-text="上一页"
             next-text="下一页"
-            layout="prev, pager, next"
+            layout="prev, pager, next, jumper"
             :page-count="Math.ceil($store.state.communitymessage.total/pagesize)"
-			@size-change="pageSize"
-            @current-change ="v=>this.$store.dispatch('rows',{postId,pageNum:v})"
+			:page-size="2"
+            @current-change ="handleChange"
              >
         </el-pagination>
     </div>
@@ -27,15 +26,11 @@
 		
 		},	
 		methods:{
-			search(postId,pageNum){
-				this.$store.dispatch("rows",{postId:$store.state.communitymessage.rows.id,pageNum:1});
-				console.log(postId,pageNum,22222222229);
+			handleChange(val){
+				console.log(val);
+				this.$emit("hh",val)
+				this.$store.dispatch('row',{postId:this.$route.query.postId,pageNum:val})
 			},	
-			pageSize(pageSize){
-				pageSize=this.pagesize;
-				console.log(pageSize,7878);
-				// var page=Math.cell($store.state.communitymessage.total/pagesize)
-			}		
 		}
 	}
 </script>

@@ -1,6 +1,7 @@
 import vue from "vue"
 import bus from  "../../bus"
 import axios from "axios"
+import qs from "querystring"
 export default{
     state:{
        
@@ -22,8 +23,7 @@ export default{
             shopAds:"青年路",
             price:"200",
        },
-        total:41,
-       
+        total:"",
         rows:[//获取帖子评论
             {
                 id:1,
@@ -40,29 +40,13 @@ export default{
                 createdtime:"2019-04-20 11:20",
                 comment:"美啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦美。啦啦美啦美啦啦没拉拉阿拉",
                 commenttop:"90",
-                userName:"游来游去的小可爱",
+                userName:"游来游",
                 userImg:require("@/assets/img/community/coverage.png")
             },
-            // {
-            //     id:3,
-            //     userid:3,
-            //     createdtime:"2019-04-20 11:20",
-            //     comment:"美啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦美。啦啦美啦美啦啦没拉拉阿拉",
-            //     commenttop:"90",
-            //     userName:"游来游去的小可爱",
-            //     userImg:require("@/assets/img/community/coverage.png")
-            // },
-            // {
-            //     id:4,
-            //     userid:4,
-            //     createdtime:"2019-04-20 11:20",
-            //     comment:"美啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦美啦啦美啦啦美啦啦美。啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦啦啦美啦啦美啦啦美啦啦美啦啦美。啦啦美啦美啦啦没拉拉阿拉",
-            //     commenttop:"90",
-            //     userName:"游来游去的小可爱",
-            //     userImg:require("@/assets/img/community/coverage.png")
-            // }
+          
         ],
         postImgList:[//详情正文图片
+        
             {id:0,postid:1,postimg:require("@/assets/img/community/message1.png")},
             {id:1,postid:1,postimg:require("@/assets/img/community/message1.png")},
             {id:2,postid:1,postimg:require("@/assets/img/community/message1.png")},
@@ -83,12 +67,12 @@ export default{
     actions:{
         //
         postInfo({commit},postId){//获取帖子详情
-            axios.get("/community/postinfo?postId=postId")
+            axios.get("/community/postinfo?postId="+postId.postId+"&userId="+postId.userId)
             .then(({data})=>{
                commit("POSTINFO",data);
             })
         },
-        rows({commit},obj){//获取帖子评论 page页
+        row({commit},obj){//获取帖子评论 page页
             axios.get("/community/postreview",{
                 params:obj
             })//,{postId当前帖子的id,pageNum}
@@ -97,11 +81,13 @@ export default{
             })
         },
         answer({commit},obj){//回t贴
-            axios.post("/community/addcomment",{
-                userId:obj.userId,
-                postId:obj.postId,
-                comment:obj.comment
-            }).then(({data})=>{
+            axios.post("/community/addcomment",qs.stringify(obj)
+            // {
+            //     userid:obj.userd,
+            //     postid:obj.postId,
+            //     comment:obj.comment
+            // }
+            ).then(({data})=>{
                 if(data.code===0){
                     alert("回复成功")
                 }else{
@@ -110,8 +96,8 @@ export default{
               
             })
         },
-         uptop({commit,}){//点赞功能
-            axios.post("community/uptop",{
+         uptop({commit},postId){//点赞功能
+            axios.post("/community/uptop",{
                 id:postId})//id=postId
             .then(({data})=>{
                 if(data.code===0){

@@ -33,7 +33,7 @@ export default {
         }
     },
      mounted(){
-        this.$store.dispatch("postInfo",1);
+        this.$store.dispatch("postInfo",this.$route.query);
         }
 }
 </script>

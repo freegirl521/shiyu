@@ -4,7 +4,7 @@ import axios from "axios"
 
 export default{
     state:{
-        userImg:require("@/assets/img/community/posting.png"),
+        // userImg:require("@/assets/img/community/posting.png"),
         aboutList:[
             {
                 id:1,
@@ -24,19 +24,20 @@ export default{
     mutations:{
         GETWRITEINFO(state,data){
             state.userImg = data.userImg;
-            state.aboutList = date.aboutList;
+            state.aboutList = data.aboutList;
         },
        
     },
     actions:{
-        getwriteinfo({commit},userid){//获取用户与主题信息:
-            axios.get("/community/getwriteinfo?userid=1")
+        getwriteinfo({commit},userid=1){//获取用户与主题信息:
+            axios.get("/community/getwriteinfo?userid="+userid)
             .then(({data})=>{
                 commit("GETWRITEINFO",data);
             })
         },
         addpost({commit},obj){//写帖子
-            axios.get("/community/addpost",{
+            console.log(obj,77777);
+            axios.post("/community/addpost",{
                 userid:obj.userid,
                 posttext:obj.posttext,
                 postname:obj.postname,

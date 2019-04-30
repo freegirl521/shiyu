@@ -5,7 +5,7 @@
            <p>社区论坛>帖子正文</p>
         </div>
         <!-- 主要内容 -->
-        <div class="select">
+        <div class="select1">
             <!-- 头部信息 -->
             <top></top>
             <!-- 详情 -->
@@ -34,8 +34,9 @@ export default {
     },
     
     mounted(){
-        this.$store.dispatch("postInfo",this.$route.query.postId);//详情 ////实参
-        this.$store.dispatch("rows",{postId:this.$route.query.postId,pageNum:1});//评论
+        console.log(this.$route.query)
+        this.$store.dispatch("postInfo",this.$route.query);//详情 ////实参
+        this.$store.dispatch("row",{postId:this.$route.query.postId,pageNum:1});//评论
       
     }
      

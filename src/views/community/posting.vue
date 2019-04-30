@@ -22,11 +22,18 @@
             <div class="left"><!-- 帖子的主题 -->
             <el-cascader
                     placeholder="主题"
-                    :options="this.options"
+                    :options="$store.state.posting.aboutList"
                     filterable
+                    :props="props"
                     change-on-select
+                    ref="cas"
+                    @change="onchange"
                     >
                 </el-cascader>
+                <!-- ref="cas"
+                @change="onchange"
+                    主题（获取主题名）
+                 -->
             </div>
             <div class="right">请告诉我帖子的主题</div>
             <div class="content"><!-- 帖子的内容 -->
@@ -41,17 +48,12 @@
                 <el-upload
                     class="upload-demo"
                     action="https://jsonplaceholder.typicode.com/posts/"
-                    :on-preview="handlePreview"
-                    :on-remove="handleRemove"
-                
                     accept="image/png,image/jpg,image/jpeg"
                     :before-upload="beforeUpload"
                     list-type="picture"
                     v-model="posttext">
                     <el-button size="small" type="primary">添加图片</el-button>
-                    
                 </el-upload>
-                <!-- :file-list="fileList" -->
                 <el-row class="button">
                 <el-button type="info" @click="serve">存草稿</el-button>
                     <el-button type="danger" @click="postanswer">发布</el-button>
@@ -66,50 +68,32 @@
         name:"posting",
         data(){
             return{
-                options:[
-                    {
-                        value: 'zhinan',
-                        label:"美食"
-                        // $store.state.posting.aboutList.about
-                    },
-                    // {
-                    // value: 'zhinan',
-                    //     label:$store.state.posting.aboutList[1].about
-                    // },
-                    // {
-                    // value: 'zhinan',
-                    //     label:$store.state.posting.aboutList[2].about 
-                    // },
-                    // {
-                    // value: 'zhinan',
-                    //     label:$store.state.posting.aboutList[3].about  
-                    // }
-                ],
+                props:{
+                    label:"about",
+                    value:"id",
+                },
+                postname:"",
+                aboutid:"",
                 posttext:""  
             }
         },
          methods: {
             postanswer(){
-                console.log(8888888);
-                this.$store.dispatch("postanswer",{posttext:this.posttext,
                 
-                });
-               
-                // {userid:localStorage.userId,posttext:this.posttext,postname:this.options,aboutid:$store.state.aboutList.id}
-              
-               
-                console.log(this.posttext,this.aboutid,6666666);
+                this.$store.dispatch("addpost",{posttext:this.posttext,userid:localStorage.userid,postname:this.postname,aboutid:this.aboutid});
+                console.log(this.posttext,this.userid,this.aboutid,this.postname,6666666);
             },
    
             serve(){
-                console.log(1111111111111111);
+                alert("保存成功");
+                this.posttext="";
             },
-            handleRemove(file) {
-                console.log(file);
-            },
-            handlePreview(file) {
-                console.log(file);
-            },
+            // handleRemove(file,) {
+            //     console.log(file,);
+            // },
+            // handlePreview(file) {
+            //     console.log(file);
+            // },
             beforeUpload (file) {
                 let _this = this
                 const is1M = file.size / 1024 / 1024 < 1; // 限制小于1M
@@ -127,8 +111,16 @@
                     return file;
                     });
             
-                }
-        }    
+            },
+            onchange(item){
+                this.aboutid=item[0];
+                this.postname=this.$refs.cas.currentLabels[0];//字符串
+                console.log(item,this.$refs.cas.currentLabels);
+            }
+        },
+        mounted(){
+            this.$store.dispatch("getwriteinfo",localStorage.userid);
+        },   
     }
 </script>
 
@@ -185,39 +177,6 @@ margin:0 auto;
     height:70px;
     border:1px dashed #dddddd;
 }
-/*
-.header-top{
-    width:1200px;
-    height:40px;
-    line-height: 40px;
-    margin:0 auto;
-    font-size:16px;
-    color:#DE1C31;
-}
-.header-top-left{
-    float:left;
-    width:80px;
-    margin-left: 120px;
-}
-.header-top-left img{
-    width:16px;
-    height:16px;
-    margin-right: 10px;
-}
-.header-top-right{
-    float:right;
-}
-.header-top-right li{
-    float: left;
-    margin-left:20px;
-   cursor: pointer;
-}
-.header-top-right span{
-    float: left;
-    margin-left: 6px;
-} */
-
-  
 /* 内容 */
 .box{
     width:1200px;

@@ -85,7 +85,7 @@ export default{
             {
                 userId:1,
                 userName:"王",
-                // userImg:require("@/assets/img/community/coverage.png"),
+                userImg:require("@/assets/img/community/coverage.png"),
                 postName:"这是什么流",
                 postText:"片为更好而我国",
                 createdate:"2019-03-03 23:00",
@@ -103,8 +103,11 @@ export default{
             console.log(data,1212121);
         },
         ROWS(state,data){//瀑布流
-            state.rows = data.rows;
-            console.log(data,222222222222223)
+            //state.rows = data;
+             state.rows=state.rows.concat(data);
+             localStorage.rows=state.rows;
+             
+            console.log(state.rows,222222222222223)
         }
     },
     actions:{
@@ -116,11 +119,12 @@ export default{
                
             })
         },
-        rows({commit},Offset){//瀑布流
-            axios.get("/community/postlist?offset=offset")
+        rows({commit},offset){//瀑布流
+            console.log(offset,9);
+            axios.get("/community/postlist?offset="+offset)
             .then(data=>{
-                commit("ROWS",data);
-                console.log(data,333333333333332);
+                commit("ROWS",data.data.rows);
+                console.log(data.data.rows,333333333333332);
             })
         }
         

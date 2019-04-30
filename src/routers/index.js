@@ -115,11 +115,11 @@ export default new Router({
           //   component:shopcenter
           // },
           // 刘合枝路径设置
-        {
-            path:"/storeInformation",
-            name:"storeInformation",
-            component:storeInformation
-          },
+        // {
+        //     path:"/storeInformation",
+        //     name:"storeInformation",
+        //     component:storeInformation
+        //   },
         //   李凤燕路径设置
         {
 			path:"/listapp",

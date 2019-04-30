@@ -20,6 +20,9 @@ Vue.use(ElementUI)
 Vue.prototype.$http= axios
 Vue.use(filters)
 
+for(var key in filters){
+  Vue.filter(key,filters[key]);
+}
 
 axios.interceptors.request.use(config=>{
   config.url="http://10.9.62.232:8080"+config.url;

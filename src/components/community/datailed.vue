@@ -2,16 +2,16 @@
  
          <div class="box"> 
                 <ul>
-                    <li>
-                       <img :src="$store.state.communitymessage.postImgList[0].postimg" alt="">
+                    <li v-for="(item,index) in $store.state.communitymessage.postImgList" :key="index">
+                       <img :src="item.postimg" alt="">
                         <h1 class="box-text">
                                 <template>
                                     <p  v-for="(item,index) in $store.state.communitymessage.postInfo.postText.split(',')" :key="index" >{{item}}</p>
                                 </template>     
                         </h1>
                     </li>
-                    <li>
-                            <img :src="$store.state.communitymessage.postImgList[1].postimg" alt="">
+                    <!-- <li>
+                            <img :src="$store.state.communitymessage.postImgList[1]" alt="">
                             <h1 class="box-text" >
                                 <template>
                                     <p  v-for="(item,index) in $store.state.communitymessage.postInfo.postText.split(',')" :key="index" >{{item}}</p>
@@ -19,13 +19,13 @@
                             </h1>
                     </li>
                     <li>
-                            <img :src="$store.state.communitymessage.postImgList[2].postimg" alt="">
+                            <img :src="$store.state.communitymessage.postImgList[2]" alt="">
                             <h1 class="box-text">
                                  <template>
                                     <p  v-for="(item,index) in $store.state.communitymessage.postInfo.postText.split(',')" :key="index" >{{item}}</p>
                                 </template>  
                             </h1>
-                    </li>
+                    </li> -->
                 </ul>
                 <div class="box-bottom">
                     <p class="bottom-left"><img :src="$store.state.communitymessage.postInfo.shopheadimg" alt=""></p>

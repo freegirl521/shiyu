@@ -34,21 +34,18 @@
 </template>
 <script>
 
-// export default {
-//     name:"waterfall"
-// }
+ export default {
+   name:"waterfall",
+   
+}
 </script>
 <script>
-// export default(
-    
-// )
-
 window.onload=function(){
-// warterFall('#waterfall');
+warterFall('#waterfall');
 }
 //onresize : 浏览器窗口尺寸改变事件.
 window.onresize = function(){
-    // warterFall('#waterfall');
+    warterFall('#waterfall');
 }
 function warterFall(ele,child,space){
     //1. 初始化参数
@@ -59,9 +56,7 @@ function warterFall(ele,child,space){
 //console.log(this.$refs,1111);
    // 
    console.log(ele);
-var oBigBox=document.querySelector(ele);
-//console.log
-   
+var oBigBox=document.querySelector(ele);   
     //3. 获取所有的子节点
     let oChilds = oBigBox.children;
     //4. 计算大盒子的宽度

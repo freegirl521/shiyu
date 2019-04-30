@@ -20,6 +20,15 @@ const filters = {
 
     return realVal
 
+  },
+  sp(v){
+      if(v.includes(",")){
+          return v.split(",")
+      }else{
+        return v
+      
+      }
+         
   }
 
 
