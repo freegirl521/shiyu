@@ -19,7 +19,7 @@ import posting from "../views/community/posting.vue"
 import comment from "../views/comment/comment.vue"
 import shopcenter from "../views/shopcenter/shopcenter.vue"
 //刘合芝页面路由
-// import storeInformation from "../views/store_information/storeInformation.vue"
+import storeInformation from "../views/store_information/storeInformation.vue"
 //李凤燕页面路由
 import listapp from "../views/menu/listapp.vue"
 // 艾鑫页面路由
@@ -121,11 +121,11 @@ export default new Router({
           //   component:shopcenter
           // },
           // 刘合枝路径设置
-        // {
-        //     path:"/storeInformation",
-        //     name:"storeInformation",
-        //     component:storeInformation
-        //   },
+        {
+            path:"/storeInformation",
+            name:"storeInformation",
+            component:storeInformation
+          },
         //   李凤燕路径设置
         {
 			path:"/listapp",

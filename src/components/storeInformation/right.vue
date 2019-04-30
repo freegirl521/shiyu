@@ -1,4 +1,93 @@
-*{
+<template>
+    <div>
+         <div class="right" >
+                    <div class="resName">{{$store.state.storeInformation.succes.resName}}</div>
+                    <div class="slogan ">{{$store.state.storeInformation.succes.slogan}}</div>
+                    <div class="prices">
+                        <div class="proPrices"><i>￥</i><span>{{$store.state.storeInformation.succes.proPrices}}</span> </div>
+                        <div class="shopPrices">门店价 <i>￥</i><span>{{$store.state.storeInformation.succes.shopPrices}}</span> </div>
+                    </div>
+                    <div class="informtion">
+                        <div class="soldNum">
+                            <div class="soldNumt">已售<span>{{$store.state.storeInformation.succes.soldNum}}</span></div>
+                        </div>
+                        <div class="evaNum">
+                            <el-rate
+                                v-model="$store.state.storeInformation.succes.evaScore"
+                                disabled
+                                show-score
+                                :colors="['#DE1C31','#DE1C31','#DE1C31']"
+                                text-color="#DE1C31"
+                                score-template="{value}">
+                            </el-rate>
+                            <div class="evaNums">
+                                <span>{{$store.state.storeInformation.succes.evaNum}}</span>条团购评价
+                            </div>
+                        </div>
+                        <div class="evaScore">
+                            <div class="lit">支持随时退</div>
+                            <div class="lit">过期自动退</div>
+                        </div>
+                    </div>
+                    <div class="input_wrap">
+                        <span>数量:</span>
+                        <!-- <div class="border">
+                            <a href="javascript:" class="down_btn">
+                                <i class="iconfont">&#xe603;</i>
+                            </a> 
+                            <input type="text" class="item_num" value="1"> 
+                            <a href="javascript:" class="up_btn">
+                                <i class="iconfont">&#xe602;</i>
+                            </a>
+                        </div> -->
+                        <!-- //计数器 -->
+                        <el-input-number v-model="num" @change="handleChange" :min="1" label="计数"></el-input-number>
+                    </div>
+                        <!-- <div class="rushing"> -->
+                            <!-- <span>立即抢购</span> -->
+                            <div class="rob">
+                            <snapUp></snapUp>
+                        </div>
+                </div> 
+    </div>
+</template>
+
+
+<script>
+    import snapUp from "./snapUp.vue"
+
+    export default {
+        name:"right",
+        data(){
+            return{
+                //星级评分
+                // value: 3.7,
+                //购买数量
+                num:1,
+                key:1
+            }
+            
+        },
+        methods: {
+            //购买数量计数器
+            handleChange(value) {
+                console.log(value);
+            }
+        },
+         components:{
+            snapUp
+        }
+    }
+</script>
+
+<style scorped>
+    .input_wrap .el-input-number .el-input-number__decrease .el-icon-minus{
+        font-size:12px !important;
+    }
+    .el-button{
+        padding: 0;
+    }
+    *{
     padding: 0;
     margin: 0;
 }
@@ -161,7 +250,7 @@ a{
     line-height: 30px;
 }
 .nav .navGoods .boxx .listBottom .share .soft li a .wb{
-    background :url("../../img/store_information/jpg.png") no-repeat left 0 top 52px;
+    background :url("../../assets/img/store_information/jpg.png") no-repeat left 0 top 52px;
     width: 18px;
     height: 18px;
     display: inline-block;
@@ -779,3 +868,5 @@ a{
     /* overflow: hidden; */
 }
 
+
+</style>

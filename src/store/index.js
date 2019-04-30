@@ -7,7 +7,7 @@ import communitymessage from "./community/communitymessage.js"
 import community from "./community/community.js"
 import posting from "./community/posting.js"
 import commentDetail from "./commentDetail"
-// import storeInformation from "./storeInformation"
+import storeInformation from "./storeInformation"
 import myCenter from "./myCenter"
 import home from "./home"
 
@@ -55,7 +55,7 @@ mutations:{
         communitymessage,
         posting,
         commentDetail,
-        // storeInformation,
+        storeInformation,
         myCenter,
         home
 	}

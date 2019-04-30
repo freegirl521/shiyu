@@ -156,7 +156,8 @@
 </template>
 
 <script>
-    import "../../assets/style/comment.css";
+    // import "../../assets/style/comment.css";
+    <link rel="stylesheet" type="text/css" href="../../assets/style/comment.css"/>
     import bottom from "../../components/bottom/bottom.vue"
     export default {
         name:"comment",
