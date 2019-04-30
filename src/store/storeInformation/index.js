@@ -84,7 +84,7 @@ export default{
         //提交
         submit({commit},obj){
             console.log(obj);
-            axios.post("/shiyu/aaa",{
+            axios.post("/shiyu/qianggou",{
                     // shopId:obj.shopId,
                     // couponsId:obj.id,
                     shopNum:obj.shopNum,
