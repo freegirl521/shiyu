@@ -13,7 +13,7 @@
                    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
                        <el-form-item label="总体评分" prop="overallRating" >
                             <div class="block">
-                                <el-rate v-model="value1"
+                                <el-rate class="starOverall" v-model="value1"
                                 :colors="['#DE1C31','#DE1C31','#DE1C31']"
                                 ></el-rate>
                             </div>
