@@ -7,7 +7,7 @@
 			</div>
 			<!-- {{$store.state.list.listtype.footTypes}} -->
 			<ul class="ufooda left">
-				<li v-for="item in $store.state.list.listtype.footTypes" :key="item.id"><a href="javascript:;" class="item.id===catId?'active' : ''">{{item.footname}}</a></li>
+				<li v-for="item in $store.state.list.listtype.footTypes" :key="item.id"><a href="javascript:;" class="item.id===catId?'active' : ''" @click="food(item.id)">{{item.footname}}</a></li>
 			</ul>
 			<!-- <span class="ufooda" v-for="item in this.navfood">
 				<a href="javascript:;" :key="item.id" ><span class="item.id===catId ? 'active' : ''">{{item.footname}}</span></a>
@@ -58,15 +58,26 @@
 </template>
 
 <script>
+	import axios from "axios"
+	import {mapState} from "vuex"
 	export default{
 		name:"navfood",
 		data(){
 			return{
 				/* navfood:"", */
-				cityId:1,
-				catId:1
+				/* cityId:1,
+				catId:1 */
 				
 			}
+		},
+		methods:{
+			food(num){
+				this.$store.dispatch("food",{
+					shopType:num
+				})
+				
+			}
+			
 		},
 		/* created(){
 			axios.get("/MultitermSearch").then((data)=>{
