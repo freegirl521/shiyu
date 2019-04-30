@@ -111,17 +111,24 @@ body .infoCenter{
 .shopHead .infoCenter .shopHead_left .book{
     display: inline-block;
     width: 226px;
-    height: 29px;
+    height: 30px;
     border: 1px #DE1C31 solid;
-    line-height: 29px;
+    line-height: 30px;
     border-radius: 5px;
 }
+/* .shopHead .infoCenter .shopHead_left .book span{
+    
+} */
 .shopHead .infoCenter .shopHead_left .book img{
     vertical-align: middle;
     margin: 0 10px;
+    width: 14px;
+    height: 16px;
+    display: inline-block;
 }
 .shopHead .infoCenter .shopHead_left .book i{
     margin-left: 8px;
+    display: inline-block;
 }
 .shopHead .infoCenter .shopHead_right{
     float: right;
@@ -129,7 +136,17 @@ body .infoCenter{
 }
 .shopHead .infoCenter .shopHead_right img{
     margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
 }
+
+
+
+
+
+
+
 .sales{
     height: 180px;
    
@@ -418,6 +435,10 @@ body .infoCenter{
 .block{
     margin-top: 8px;
 }
+.commentOn_mag .starOverall{
+   /* background: #ff0; */
+   float: left;
+}
 /* 口味 环境 服务 */
 .commentOn_mag .comClassify .el-form-item{
  float: left;
@@ -444,6 +465,7 @@ float: left;
 width: 210px;
 margin-left: 12px;
 }
+
 /* 提交按钮 */
 .submitBtn{
 margin: 10px;

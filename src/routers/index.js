@@ -17,7 +17,7 @@ import community from "../views/community/community.vue"
 import posting from "../views/community/posting.vue"
 // 魏玉兰页面路由
 import comment from "../views/comment/comment.vue"
-// import shopcenter from "../views/shopcenter.vue"
+import shopcenter from "../views/shopcenter/shopcenter.vue"
 //刘合芝页面路由
 // import storeInformation from "../views/store_information/storeInformation.vue"
 //李凤燕页面路由
@@ -109,6 +109,12 @@ export default new Router({
             name:"comment",
             component:comment
           },
+          {
+            path:"/shopcenter",
+            name:"shopcenter",
+            component:shopcenter
+          },
+      
           // {
           //   path:"/shopcenter",
           //   name:"shopcenter",

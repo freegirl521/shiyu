@@ -13,7 +13,7 @@
                    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
                        <el-form-item label="总体评分" prop="overallRating" >
                             <div class="block">
-                                <el-rate v-model="value1"
+                                <el-rate class="starOverall" v-model="value1"
                                 :colors="['#DE1C31','#DE1C31','#DE1C31']"
                                 ></el-rate>
                             </div>
@@ -44,7 +44,7 @@
                         </div>
                         
                             <el-form-item label="评价" prop="desc">
-                              <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+                              <el-input type="textarea" v-model="ruleForm.desc" ref="text"></el-input>
                             </el-form-item>
                           <!-- 上传图片 -->
                           <div class="uploadImage clearfloat">
@@ -115,6 +115,16 @@
     },
     methods: {
       submitForm(formName) {
+        var obj;
+        obj={
+          evaluate:this.$refs.text.value,
+          score:this.value1,
+          flavor:this.value2,
+          service:this.value4,
+          enviorment:this.value3,
+          commentimg:""
+        },
+        this.$store.dispatch("send",obj);       
         this.$refs[formName].validate((valid) => {
           if (valid) {
             alert('submit!');
