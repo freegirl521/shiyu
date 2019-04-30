@@ -102,6 +102,15 @@ export default{
                 console.log(11111111,data);
                 commit("SETSHOPCOMMENT",data)
             })
-        }
+        },
+        send({commit},context){
+            axios.post("/insertCommentDetails",context).then(({data})=>{
+                if(data.code===1){
+                    alert("提交成功");
+                }
+                
+            })
+        },
+
     }
 }

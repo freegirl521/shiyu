@@ -56,67 +56,6 @@
          data() {
             return {
                 activeName: '1',
-                // tabsRecommend:[
-                //     {
-                //         menuname:"kkkkk",
-                //         price:18,
-                //         imgurl:require("../../assets/img/store_details/timg@2x.png")
-                //     },
-                //          {
-                //         menuname:"kkkkk",
-                //         price:18,
-                //         imgurl:require("../../assets/img/store_details/timg@2x.png")
-
-                //     },
-                //     {
-                //         menuname:"kkkkk",
-                //         price:18,
-                //         imgurl:require("../../assets/img/store_details/timg@2x.png")
-                //     }
-                    
-                // ],
-                // tabsEnvironment:[
-                //     {
-                //         environmentImg:require("../../assets/img/store_details/timg@2x(1).png")
-                //     },
-                //     {
-                //         environmentImg:require("../../assets/img/store_details/timg@2x(1).png")
-                //     }
-                // ],
-                // shopPrice:[
-                //     {
-                //         menuname:"hahahah",
-                //         price:18,
-                //         imgurl:require("../../assets/img/store_details/uWDKmtpMKfLsqSRGsR916V8P-R4MwCc3ZBy99cPKfVc8NmT9nV3mH-MgzIbl_8PYHB1FIzxqqv4y1DPjvSHfJsPMUtGpjXdtO1pf5OouG4AnY08TQIxe-DkxF3-YDtNHvJLBPMnbGaim65JmQfWVIQ@2x.png")
-
-                //     },
-                //          {
-                //         menuname:"hahahah",
-                //         price:18,
-                //         imgurl:require("../../assets/img/store_details/timg@2x(1).png")
-
-                //     },
-                // ],
-                // shopimg:[
-                //     {
-                //         shopphotoImg:require("../../assets/img/store_details/timg@2x(1).png")
-                //     },
-                //     {
-                //         shopphotoImg:require("../../assets/img/store_details/timg@2x(1).png")
-                //     },
-                //     {
-                //         shopphotoImg:require("../../assets/img/store_details/timg@2x(1).png")
-                //     },
-                //     {
-                //         shopphotoImg:require("../../assets/img/store_details/timg@2x(1).png")
-                //     },
-                //     {
-                //         shopphotoImg:require("../../assets/img/store_details/uWDKmtpMKfLsqSRGsR916V8P-R4MwCc3ZBy99cPKfVc8NmT9nV3mH-MgzIbl_8PYHB1FIzxqqv4y1DPjvSHfJsPMUtGpjXdtO1pf5OouG4AnY08TQIxe-DkxF3-YDtNHvJLBPMnbGaim65JmQfWVIQ@2x.png")
-                //     },
-                //     {
-                //         shopphotoImg:require("../../assets/img/store_details/uWDKmtpMKfLsqSRGsR916V8P-R4MwCc3ZBy99cPKfVc8NmT9nV3mH-MgzIbl_8PYHB1FIzxqqv4y1DPjvSHfJsPMUtGpjXdtO1pf5OouG4AnY08TQIxe-DkxF3-YDtNHvJLBPMnbGaim65JmQfWVIQ@2x.png")
-                //     }
-                // ]
             };
          },
         methods: {
@@ -130,10 +69,6 @@
         },
         mounted(){
             this.$store.dispatch("getShopRecommend",{type:1,shopid:13});
-            
-            // this.$store.dispatch("getShopEnvironment",this.$route.query.shopid);
-            // this.$store.dispatch("getShopPrice",this.$route.query.shopid);
-            // this.$store.dispatch("getShopimg",this.$route.query.shopid);
         }
     }
 </script>
