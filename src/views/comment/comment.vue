@@ -97,12 +97,14 @@
                         </div>
                         <div class="tui clear">
                             <span class="left">推荐：</span>
-                            <div class="menu left">
-                                <i>啦啦啦啦</i>
-                                <i>啦啦啦</i>
+                            <div class="menu left" v-for="(recommend,index) in item.like" :key=index>
+                                <template>
+                                <i>{{recommend}}</i>
+                                <!-- <i>啦啦啦</i>
                                 <i>啦啦啦啦啦</i>
                                 <i>啦啦啦啦</i>
-                                <i>啦啦啦啦</i>
+                                <i>啦啦啦啦</i> -->
+                                </template>
                             </div>
                             <p class="right">
                                 <!-- 展开 -->
@@ -141,7 +143,7 @@
             prev-text="上一页"
             next-text="下一页"
             layout="prev, pager, next"
-            :page-count="$store.state.page.pages"
+            :page-count="$store.state.page.pageSum"
             :current-page="$store.state.page.pageIndex"
             @current-change ="v=>this.$store.dispatch('getList',{keyword:'',pageIndex:v})"
              >
@@ -149,22 +151,13 @@
     </div>
 
     <!-- 底部 -->
-    <footer>
-        <p>
-            ©2003-2019 dianping.com, All Rights Reserved. 本站发布的所有内容，未经许可，不得转载，详见 《知识产权声明》 《用户使用协议》
-        </p>
-        <p>
-            增值电信业务经营许可证： 沪B2-20040012 | 互联网药品信息服务资格：(沪)-经营性-2017-0007
-        </p>
-        <p>
-            网络文化经营许可证： 沪网文[2017]2375-139号 | 用户举报热线：10100011
-        </p>                                   
-    </footer>
+    <bottom></bottom>
     </div>
 </template>
 
 <script>
     import "../../assets/style/comment.css";
+    import bottom from "../../components/bottom/bottom.vue"
     export default {
         name:"comment",
         data() {
@@ -187,6 +180,9 @@
              ]
             
             }
+        },
+        components:{
+            bottom
         },
         methods: {
             showToggle(index){
@@ -224,7 +220,8 @@
     }
 </script>
 
-<style>
+<style scoped>
+
     /* 评分 */
     .el-rate{
         float: right;

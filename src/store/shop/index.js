@@ -10,7 +10,7 @@ export default {
         shopInfoList:[],
         shopId:localStorage.shopId,// 商户Id
         shopName:localStorage.shopName,//店铺名称
-        token:localStorage.token,// token
+        // token:localStorage.token,// token
         shopNewsList:{
             // shopname:"喵喵喵",
             // commentscore:4,
@@ -23,17 +23,14 @@ export default {
             // shopphone:"13245678900",
             // feature:""
         },
-        shopOrdersList:[]
+        shopOrdersList:[],
+
+        shopNewsList:{},
+        discountList:[],
     },
     mutations:{
         SET_LIST(state,list){
             state.shopInfoList=list;
-        },
-        SET_USERINFO(state,list){
-            state.shopNewsList=list;
-        },
-        GET_SHOPORDERS(state,list){
-            state.shopOrdersList=list;
         },
         SET_SHOPID_SHOPNAME(state,obj){
             console.log(2222,obj);
@@ -49,25 +46,35 @@ export default {
             console.log(Dialog)
             state.Dialog=Dialog;
         },
+        SET_USERINFO(state,list){
+            state.shopNewsList=list;
+        },
+        SET_SHOPORDERS(state,list){
+            state.shopOrdersList=list;
+        },
+        SETDISCOUNT( state,obj){
+            state.discountList=obj.discountList;
+          },
+        
     },
     getters:{
     
     },
     actions:{
         getShopInfo({commit},pageIndex){
-           axios.get("/shop/GetStoreFoodList",{
-                params:{
-                    shopid:1,
-                    page:pageIndex,
+            axios.get("/shop/GetStoreFoodList",{
+                 params:{
+                     shopid:1,
+                     page:pageIndex,
                 }
             })
-                .then(({data})=>{
-                    console.log(data)
-                    commit("SET_LIST",data.data.list);
-                    commit("CHANGE_PAGE",{
-                        pageIndex:data.pageIndex,
-                        pageSum:data.pageSum
-                    })
+            .then(({data})=>{
+                console.log(data)
+                commit("SET_LIST",data.data.list);
+                commit("CHANGE_PAGE",{
+                    pageIndex:data.pageIndex,
+                    pageSum:data.pageSum
+                })
             })
         },
         updateInfo({commit},menuid){
@@ -100,17 +107,16 @@ export default {
         },
         getShopNews({commit}){
             axios.get("/shop/GetShopInfo",{
-                 params:{
+                params:{
                     shopid:1
-                 }
-             })
-                 .then(({data})=>{
-                     console.log(data)
-                     commit("SET_USERINFO",data.data);
-                     
-             })
-         },
-         getShopOrders({commit}){
+                }
+            })
+            .then(({data})=>{
+                console.log(data)
+                commit("SET_USERINFO",data.data);
+            })
+        },
+        getShopOrders({commit}){
             axios.get("/shop/GetShopIndentList",{
                  params:{
                     shopid:1,
@@ -119,10 +125,29 @@ export default {
                  }
              })
                  .then(({data})=>{
-                     console.log(data)
-                     commit("GET_SHOPORDERS",data.data);
+                     console.log(data,11111111);
+                     commit("SET_SHOPORDERS",data.data.list);
                      
              })
          },
+         getDiscount({commit},shopId){
+            axios.post('/getDiscount',{
+                shopId,
+            }).then(data=>{
+              console.log(data);
+              commit("SETDISCOUNT",data);
+            })
+          },
+          addDiscount({commit},obj){
+            axios.post('/addDiscount',{
+                was:obj.was,
+                now:obj.now,
+                textarea:obj.textarea
+            }).then(data=>{
+              if(data.code===1){
+                  alert("添加成功");
+              }
+            })
+          }
     }
 }
