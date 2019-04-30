@@ -29,7 +29,7 @@ import centerPosts from "../views/myCenter/centerPosts"
 import centerCollect from "../views/myCenter/centerCollect"
 import centerGroup from "../views/myCenter/centerGroup"
 import centerIndent from "../views/myCenter/centerIndent"
-// import centerIndex from "../views/myCenter/centerindex"
+import centerIndex from "../views/myCenter/centerindex"
 import centerComment from "../views/myCenter/centerComment"
 
 
@@ -131,11 +131,11 @@ export default new Router({
           name:'myCenter',
           component:myCenter,
             children:[
-                // {
-                //     path:'/centerIndex',
-                //     name:"centerIndex",
-                //     component:centerIndex
-                // },
+                {
+                    path:'/centerIndex',
+                    name:"centerIndex",
+                    component:centerIndex
+                },
                 {
                     path:'/centerComment',
                     component:centerComment

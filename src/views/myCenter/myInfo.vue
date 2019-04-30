@@ -1,6 +1,6 @@
 <template>
     <div class="aside">
-        <navleft></navleft>
+        <myleft></myleft>
         <div class="main">
             <my-info-tem></my-info-tem>
         </div>
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-    // import navleft from "../../components/myCenter/navleft"
+    import myleft from "../../components/myCenter/myleft"
     import myInfoTem from "../../components/myCenter/myInfoTem"
     export default {
         name: "myInfo",
         components:{
-            // navleft,
+           myleft,
             myInfoTem
         }
     }
