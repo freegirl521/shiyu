@@ -435,6 +435,10 @@ body .infoCenter{
 .block{
     margin-top: 8px;
 }
+.commentOn_mag .starOverall{
+   /* background: #ff0; */
+   float: left;
+}
 /* 口味 环境 服务 */
 .commentOn_mag .comClassify .el-form-item{
  float: left;
@@ -461,6 +465,7 @@ float: left;
 width: 210px;
 margin-left: 12px;
 }
+
 /* 提交按钮 */
 .submitBtn{
 margin: 10px;
