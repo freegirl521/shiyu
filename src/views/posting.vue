@@ -107,8 +107,8 @@
             serve(){
                 console.log(1111111111111111);
             },
-            handleRemove(file,) {
-                console.log(file,);
+            handleRemove(file) {
+                console.log(file);
             },
             handlePreview(file) {
                 console.log(file);

@@ -8,6 +8,7 @@ import community from "./community/community.js"
 import posting from "./community/posting.js"
 import commentDetail from "./commentDetail"
 import storeInformation from "./storeInformation"
+import myCenter from "./myCenter"
 
 
 Vue.use(vuex);
@@ -42,6 +43,7 @@ mutations:{
         communitymessage,
         posting,
         commentDetail,
-        storeInformation
+        storeInformation,
+        myCenter
 	}
 })
