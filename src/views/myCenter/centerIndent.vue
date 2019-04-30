@@ -60,7 +60,7 @@
 
 <script>
     import identTem from "../../components/myCenter/identTem"
-    // import indetCenterNu from "../../components/myCenter/identCenterNu"
+    import indetCenterNu from "../../components/myCenter/identCenterNu"
     export default {
         name: "centerIndent",
         data(){
@@ -92,7 +92,7 @@
         },
         components:{
             identTem,
-            // indetCenterNu,
+             indetCenterNu,
         },
         mounted(){
             this.$store.dispatch("getIndent")
