@@ -32,15 +32,23 @@
 		name:"hot",
 		methods:{
 			area(e){
+				let arr = Array.from(document.querySelectorAll("span") ) 
+				arr.forEach(item => {
+					item.className = ''
+				})
 				let obj = this.$store.state.list.req
 				obj.shopAds = e.target.innerHTML 
-				axios.get("/MultitermSearch",{
-					params:obj
-				})
+				this.$store.dispatch("address",
+					obj
+				)
+				e.target.className = "active"
 			}
 		}
 	}
 </script>
 
 <style scoped>
+	.active{
+		color: red;
+	}
 </style>

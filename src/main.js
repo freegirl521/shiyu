@@ -22,7 +22,7 @@ Vue.use(filters)
 
 
 axios.interceptors.request.use(config=>{
-  config.url="http://10.9.62.238:8080"+config.url;
+  config.url="http://10.9.62.232:8080"+config.url;
   return config;
 })
 

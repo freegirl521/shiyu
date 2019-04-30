@@ -1,0 +1,264 @@
+.swiper-container {
+    width:100%;
+    height:auto;
+	overflow: hidden;
+} 
+.swiper-container img{
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+article{
+	background:#f8f8f8;
+}
+.center{
+	width:1200px;
+	margin: 0 auto;
+}
+.find{
+	padding:0 26px;
+	padding-top:14px;
+	padding-bottom: 26px;
+	color: #DE1C31;
+	overflow: hidden;
+}
+.content-title{
+	margin-bottom: 30px;
+}
+.content-title h3{
+	width: 150px;
+	border-bottom: 2px solid #DE1C31;
+	font-size:18px;
+	padding:5px 0;
+	float: left;
+}
+.content-title span{
+	padding-top: 6px;
+	float: right;
+	cursor:pointer;
+}
+.content-item{
+	padding: 30px 24px 0;
+	width:212px;
+	height:300px;
+	float: left;
+	background:rgba(253,253,253,1);
+	box-shadow:0px 2px 6px 0px rgba(10,6,38,0.2);
+	border-radius:5px;
+	margin-right: 20px;
+	
+}
+.content-item img{
+	width: 164px;
+	height: 114px;
+	vertical-align: top;
+}
+.find-name{
+font-size:16px;
+font-weight:bold;
+color:rgba(17,17,17,1);
+margin-top: 44px;
+line-height: 16px;
+}
+.content-item{
+	font-size:14px;
+	font-weight:bold;
+	color:rgba(171,171,171,1);
+	
+}
+.content-item p{
+	padding-top: 10px;
+	font-size: 14px;
+	line-height: 14px;
+}
+.star{
+	padding-top: 19px;
+}
+.star img{
+	width: 20px;
+	height: 20px;
+}
+.sort a{
+	font-size: 14px;
+	color: #111111;
+	padding-right: 29px;
+}
+.active{
+	color: #DE1C31 !important;
+}
+.shop-item{
+	width:560px;
+height:240px;
+background:rgba(253,253,253,1);
+border:1px solid rgba(238, 238, 238, 0.6);
+border-radius:6px;
+}
+
+.shop-item{
+	padding: 30px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.shop-item dt{
+	float: left;
+	height: 180px;
+	line-height: 180px;
+}
+.shop-item dt img{
+	width: 180px;
+	height: auto;
+	vertical-align: middle;
+}
+.shop-item dd{
+	float: left;
+	width:300px;
+	padding-left: 21px;
+	padding-bottom: 10px;
+}
+.shop-item dd p{
+	font-size: 18px;
+	color: #111111;
+	line-height: 30px;
+}
+.shop-item dd p a{
+	color: #111111;
+	padding-left:10px;
+}
+.shop-item dd img{
+	width: 20px;
+	height: 20px;
+}
+.type{
+	font-size:14px !important;
+	margin-top: 10px;
+	line-height: 22px !important;
+}
+.address{
+	font-size:14px !important;
+	line-height: 22px !important;
+	}
+	.shop-container{
+		width: 1200px;
+		overflow: hidden;
+	}
+	.text-container{
+		width: 1200px;
+		overflow: hidden;
+	}
+	.text-item{
+		width:362px;
+		height:500px;
+		background:rgba(253,253,253,1);
+		border:1px solid rgba(238, 238, 238, 1);
+		border-radius:5px;
+		padding: 28px 20px 10px 30px;
+		padding-right: 20px;
+		float: left;
+		margin-right:24px ;
+		margin-bottom: 30px;
+	}
+	.user-info dt{
+		float: left;
+		width: 45px;
+		height: 45px;
+		background:rgba(253,253,253,1);
+		border:1px solid rgba(220,220,220,1);
+		border-radius:23px;
+	line-height:41px ;
+		text-align: center;
+	}
+	.user-info dt img{
+		display: inline-block;
+		width: 21px;
+		height: 34px;
+		vertical-align: middle;
+	}
+	.user-info dd{
+		float: left;
+		padding-left: 9px;
+	}
+.u-name{
+	font-size:14px;
+font-weight:bold;
+color:rgba(17,17,17,1);
+}
+.u-time{
+	font-size:12px;
+font-weight:bold;
+color:rgba(171,171,171,1);
+}
+.u-com{
+	font-size:10px;
+font-weight:bold;
+color:rgba(171,171,171,1);
+}
+.u-com span{
+	padding-right: 14px;
+}
+.u-com span i{
+	padding-left: 5px;
+}
+.content{
+	width:300px;
+height:188px;
+font-size:14px;
+font-weight:bold;
+color:rgba(17,17,17,1);
+line-height:22px;
+padding-top: 16px;
+padding-bottom:20px;
+}
+.u-img img{
+	float: left;
+	width: 90px;
+	height: 90px;
+	margin-bottom: 20px;
+	margin-right: 13px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.shop{
+	padding:0 26px;
+	color: #DE1C31;
+	overflow: hidden;
+}
+.wrap{
+	width: 1300px;
+}
+.comment{
+	width: 360px;
+	height: 500px;
+	padding:30px;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 30px;
+background:rgba(253,253,253,1);
+border:1px solid rgba(238, 238, 238, 1);
+}
+.comment img{
+	width: 300px;
+	height: 180px;
+}
+.s-name{
+	font-size:18px;
+	color:rgba(17,17,17,1);
+	line-height: 46px;
+}
+.comment-img img{
+	width: 20px;
+	height: 20px;
+	margin-bottom: 4px;
+}
+.comment-con{
+	font-size:14px;
+font-weight:bold;
+color:rgba(32,32,32,1);
+	line-height: 22px;
+	padding-top: 12px;
+}
+
+footer img{
+	width: 100%;
+	height: auto;
+}

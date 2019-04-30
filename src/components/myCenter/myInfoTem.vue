@@ -57,7 +57,7 @@
                    </ul>
                    <div class="foot">
                        <span>
-                           <button class="my-btn" type="submit">保存</button>
+                           <input class="my-btn" type="submit" value="保存" @click="submitForm">
                        </span>
                    </div>
                </form>
@@ -79,7 +79,23 @@
         methods:{
             uppic(){
                 console.log("11111111")
+            },
+            submitForm(){
+                this.$store.dispatch("postMyInfo",{
+                    data:{
+                        userid:0,
+                        userName:"dpuser",
+                        usersex:1,//性别
+                        userads:"北京",//住址
+                        usertext:"skdjlkajdlksajds",//简介
+                        userimg:this.src,
+
+                    }
+                });
+                console.log(this.$store.state.myCenter.message)
+
             }
+
         },
         components:{
             radioMyInfo,

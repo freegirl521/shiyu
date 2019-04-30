@@ -4,7 +4,7 @@ module.exports={
 		// port:8080 
 		proxy:{
 			"/lh":{
-				target:"10.9.62.238",
+				target:"10.9.62.232",
 				changeOrigin:true,
 				pathRewrite:{
 					"^lh":""
