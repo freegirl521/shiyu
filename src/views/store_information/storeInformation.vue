@@ -263,8 +263,7 @@
   }
 </script>
 
-<style scoped>
-@import "../../assets/style/css/font/iconfont.css";
+<style src="../../assets/style/css/font/iconfont.css" scoped>
 *{
     padding: 0;
     margin: 0;

@@ -41,9 +41,12 @@
     }
 </script>
 
-<style scoped>
-@import "../../static/index_css/base.css";
-@import "../../static/index_css/index.css";
-@import "../../static/index_css/public.css";
-
+<style src="../../static/index_css/base.css" scoped>
 </style>
+<style src="../../static/index_css/index.css" scoped>
+</style>
+<style src="../../static/index_css/public.css" scoped>
+</style>
+
+
+

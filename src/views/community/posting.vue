@@ -124,7 +124,7 @@
     }
 </script>
 
-<style scoped>
+<style >
 /* 头部 */
 
  .posting-header{

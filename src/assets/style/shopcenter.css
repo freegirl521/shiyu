@@ -37,8 +37,8 @@ hgroup{
 }
 .manage{
 	padding: 7px 20px;
-	width:190px;
-	height:46px;
+	width:230px;
+	height:60px;
 	color: #FFFFFF;
 	background:rgba(222,28,49,1);
 }
@@ -147,7 +147,7 @@ hgroup{
 }
 .title p{
 	padding: 17px 27px;
-	width:103px;
+	width:157px;
 	font-size: 18px;
 	margin-left: 230px;
 	color: #fff;
@@ -156,6 +156,7 @@ hgroup{
 }
 .title img{
 	margin-left: 4px;
+	vertical-align: middle;
 }
 figcaption{
 	width: 970px;

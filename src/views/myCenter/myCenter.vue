@@ -24,8 +24,7 @@
     }
 </script>
 
-<style scoped>
- @import "../../assets/css/myCenter/common.css";
- @import"../../assets/css/myCenter/userInfo.css";
-
+<style src="../../assets/css/myCenter/common.css" scoped>
+</style>
+<style src="../../assets/css/myCenter/userInfo.css" scoped>
 </style>

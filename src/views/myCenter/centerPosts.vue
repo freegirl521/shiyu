@@ -32,7 +32,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(item,index) in $store.state.myCenter.pageInfo_post.list">
+                                    <tr v-for="(item,index) in $store.state.myCenter.pageInfo_post.list" :key="index">
                                         <td><a href="#">{{item.postname}}</a></td>
                                         <td><a href="#">{{item.posttext}}</a></td>
                                     </tr>

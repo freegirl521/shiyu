@@ -20,7 +20,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .aside{
         width: 1200px;
         margin: 0 auto;

@@ -219,8 +219,8 @@
     }
 </script>
 
-<style scoped>
-     @import "../../assets/style/comment.css";
+<style src="../../assets/style/comment.css" scoped>
+     
 
     /* 评分 */
     .el-rate{

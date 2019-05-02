@@ -43,8 +43,7 @@
     
 </script>
 
-<style lang="scss" scoped>
-@import "../../assets/style-details/store_details.css";
+<style src="../../assets/style-details/store_details.css" scoped>
 </style>
 <style>
 /* 选项卡 */

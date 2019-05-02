@@ -1,6 +1,6 @@
 <template>
 
-    <div class="tab clear">
+    <div class="tab_nav clear">
         <ul class="guide">
             <li class="link" @mouseover="link=true" @mouseout="link=false">
                 <a href="">美食分类</a>
@@ -14,7 +14,7 @@
                             </span>
                             <dl class="sec-container clear"  v-show="index===isShow" >
                                 <dt class="sec-title">{{List.catName}}</dt>
-                                <dd class="sec-item" v-for="item in List.footTypeDTO "><router-link :to="{name:'',query:{keyWord:item.catName}}">{{item.catName}}</router-link></dd>
+                                <dd class="sec-item" v-for="(item,index) in List.footTypeDTO " :key="index"><router-link :to="{name:'',query:{keyWord:item.catName}}">{{item.catName}}</router-link></dd>
                             </dl>
                         </li>
 

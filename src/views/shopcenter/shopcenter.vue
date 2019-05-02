@@ -498,9 +498,10 @@
   	}  
 </script>
 
-<style scoped>
-@import "../../assets/style/public.css";
-@import "../../assets/style/shopcenter.css";
+<style src="../../assets/style/shopcenter.css" scoped>
+</style>
+
+<style src="../../assets/style/public.css" scoped>
 	.mask{
 		width:180px;
 		height:160px;
@@ -526,7 +527,6 @@
 	.el-message-box__wrapper .el-message-box{
 		width:513px !important;
 		height:517px !important;
-		background:rgba(25,255,255,1) !important;
 	}
     .el-dialog__header{
         width:100%;

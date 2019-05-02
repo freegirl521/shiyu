@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios';
 import Vuex from 'vuex';
 import store from './store'
-import './assets/css/reset.css'
+//import './assets/css/reset.css'
 import filters from "./filters"
 
 Vue.use(Vuex)

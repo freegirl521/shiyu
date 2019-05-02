@@ -42,8 +42,8 @@
 		}
 	}
 </script>
-<style scoped="">
-@import "../../static/css/listcss/list.css";
+<style src="../../static/css/listcss/list.css" scoped>
+
 body{
 	background:rgba(248,248,248,1);
 }
