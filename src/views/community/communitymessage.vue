@@ -17,8 +17,6 @@
 </div>
 </template>
 <script>
-    // import "@/assets/style-community/messaage.css";
-    <link rel="stylesheet" type="text/css" href="@/assets/style-community/messaage.css"/>
     import top from "@/components/community/message-top.vue";
     import datailed from "@/components/community/datailed.vue";
     import reply from "@/components/community/reply.vue";

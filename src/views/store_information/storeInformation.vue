@@ -205,8 +205,7 @@
 </template>
 
 <script>
-    // import "../../assets/style/css/detail.css"
-    import "../../assets/style/css/font/iconfont.css"
+   
     import countdown from "../../components/storeInformation/countdown.vue"
     import shuffling from "../../components/storeInformation/shuffling.vue"
     import right from "../../components/storeInformation/right.vue"
@@ -265,6 +264,7 @@
 </script>
 
 <style scoped>
+@import "../../assets/style/css/font/iconfont.css";
 *{
     padding: 0;
     margin: 0;

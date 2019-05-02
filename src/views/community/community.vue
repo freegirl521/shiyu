@@ -13,15 +13,9 @@
         
     </div>
 </template>
-
-
 <script>
-// import "@/assets/style-community/index.css";
-<link rel="stylesheet" type="text/css" href="@/assets/style-community/index.css"/>
 import waterfall from "@/components/community/waterfall.vue"
 import { setTimeout } from 'timers';
-
-
 export default{
     name:"community",
     data(){

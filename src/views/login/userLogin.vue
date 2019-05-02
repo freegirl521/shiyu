@@ -32,7 +32,7 @@
                             <el-input placeholder="请输入用户登录密码" v-model="ruleForm.userPassword" type="password" @input="changebac">></el-input>
                         </el-form-item>
                     </div>
-                    <div class="link"><span class="dib"><router-link to="/userReg">免费注册</router-link></span><span class="dib"><router-link to="/findPwd" class="forget-pwd">忘记密码</router-link></span></div>
+                    <div class="link1"><span class="dib"><router-link to="/userReg">免费注册</router-link></span><span class="dib"><router-link to="/findPwd" class="forget-pwd">忘记密码</router-link></span></div>
                     <el-form-item>
                         <el-button type="primary" :loading="loading" @click="submitForm" class="agree" :disabled="isDisable" :class="{active:!isDisable}">立即登录</el-button>
                     </el-form-item>
@@ -260,6 +260,9 @@
 </script>
 
 <style scoped>
+    img{
+        width: 100%;
+    }
     .user-login {
         position: absolute;
         left: 50%;
@@ -339,15 +342,15 @@
     .phone-login .el-form-item:nth-child(2) .el-input::after {
         background-image: url("../../assets/img/login/pwd.png")
     }
-    .link {
+    .link1 {
         display: flex;
         margin-bottom: 20px;
     }
-    .link span:last-child {
+    .link1 span:last-child {
         flex: 1;
         text-align: right;
     }
-    .link span:first-child {
+    .link1 span:first-child {
         flex: 1;
         text-align: left;
     }
@@ -362,7 +365,7 @@
         height: 46px;
     }
     .weixin {
-        margin-left: 120px;
+        margin-left: 94px;
         margin-right: 30px;
     }
     .three-title {

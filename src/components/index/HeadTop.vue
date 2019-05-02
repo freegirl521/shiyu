@@ -96,6 +96,9 @@
 </script>
 
 <style scoped>
+@import "../../static/index_css/base.css";
+@import "../../static/index_css/index.css";
+@import "../../static/index_css/public.css";
 
     .userName{
         font-size: 12px;

@@ -38,6 +38,7 @@
 </script>
 
 <style scoped>
+
 .ul{
     width: 1212px;
     overflow: hidden;

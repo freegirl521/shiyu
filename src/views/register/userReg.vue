@@ -231,6 +231,9 @@
 </script>
 
 <style scoped>
+    img{
+        width:100%;
+    }
     .user-reg {
         position: absolute;
         left: 50%;

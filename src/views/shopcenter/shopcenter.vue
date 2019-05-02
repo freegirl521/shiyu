@@ -337,8 +337,6 @@
 </template>
 
 <script>
-	import "../../assets/style/public.css";
-	import "../../assets/style/shopcenter.css";
 	
 	import dialog from "../../components/shopcenter/dialog.vue";
 	import shoporder from "../../components/seats/shoporder.vue";
@@ -500,7 +498,9 @@
   	}  
 </script>
 
-<style>
+<style scoped>
+@import "../../assets/style/public.css";
+@import "../../assets/style/shopcenter.css";
 	.mask{
 		width:180px;
 		height:160px;

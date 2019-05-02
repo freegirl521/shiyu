@@ -14,8 +14,8 @@
 </template>
 <script>
 	import axios from "axios"
-	// import "../../static/css/listcss/list.css" 
-	 <link rel="stylesheet" type="text/css" href="../../static/css/listcss/list.css"/>
+	
+	
 	import bottom from "../../components/bottom/bottom.vue"
 	import navfood from "../../components/listcomponent/navfood.vue"
 	import navarea from "../../components/listcomponent/navarea.vue"
@@ -43,6 +43,7 @@
 	}
 </script>
 <style scoped="">
+@import "../../static/css/listcss/list.css";
 body{
 	background:rgba(248,248,248,1);
 }

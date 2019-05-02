@@ -1,5 +1,5 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,header,hgroup,nav,section,article,aside,footer,figure,figcaption,menu,button{margin:0;padding:0}
-body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;font-size:14px;color:#000;/*-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;*/text-size-adjust:none;outline:none; background-color:#F6F6F6;}
+body{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;line-height:1.5;font-size:14px;color:#000;/*-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;*/text-size-adjust:none;outline:none;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;    }
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
@@ -96,7 +96,7 @@ textarea::-moz-focus-inner{
     body{font-size:14px!important}
 }
 @media only screen and (min-width:480px){
-    body{font-size:16px!important}
+    /* body{font-size:16px!important} */
 }
 .text-center {
     text-align: center;

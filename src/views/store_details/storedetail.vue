@@ -21,7 +21,7 @@
     import storeDetailComment from  "../../components/comStore/storeDetailComment.vue";
     import storeDetailComOn from  "../../components/comStore/storeDetailComOn.vue";
     // import text from  "../../components/comStore/text.vue";
-    import "@/assets/style-details/store_details.css" ;
+   
     export default {
         name:"storedetail",
         data(){
@@ -44,7 +44,7 @@
 </script>
 
 <style lang="scss" scoped>
-   
+@import "../../assets/style-details/store_details.css";
 </style>
 <style>
 /* 选项卡 */

@@ -13,12 +13,7 @@
 </template>
 
 <script>
-    // import "../../static/index_css/index.css";
-    // import "../../static/index_css/base.css";
-    // import "../../static/index_css/public.css";
-    <link rel="stylesheet" type="text/css" href="../../static/index_css/index.css"/>;
-    <link rel="stylesheet" type="text/css" href="../../static/index_css/base.css"/>;
-    <link rel="stylesheet" type="text/css" href="../../static/index_css/public.css"/>
+    
     import tabs from "../../components/index/tab";
     import HeadTop from "../../components/index/HeadTop";
     import swiper from "../../components/index/swiper";
@@ -46,6 +41,9 @@
     }
 </script>
 
-<style>
+<style scoped>
+@import "../../static/index_css/base.css";
+@import "../../static/index_css/index.css";
+@import "../../static/index_css/public.css";
 
 </style>

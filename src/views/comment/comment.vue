@@ -156,8 +156,6 @@
 </template>
 
 <script>
-    // import "../../assets/style/comment.css";
-    <link rel="stylesheet" type="text/css" href="../../assets/style/comment.css"/>
     import bottom from "../../components/bottom/bottom.vue"
     export default {
         name:"comment",
@@ -222,6 +220,7 @@
 </script>
 
 <style scoped>
+     @import "../../assets/style/comment.css";
 
     /* 评分 */
     .el-rate{

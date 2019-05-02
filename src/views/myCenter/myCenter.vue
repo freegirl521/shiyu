@@ -12,11 +12,7 @@
 <script>
     import myCentertop from "../../components/myCenter/myCentertop"
     import myCenterWrapper from "../../components/myCenter/myCenterWrapper"
-
-    // import "../../assets/css/myCenter/common.css"
-    // import  "../../assets/css/myCenter/userInfo.css"
-    <link rel="stylesheet" type="text/css" href="../../assets/css/myCenter/common.css"/>;
-	<link rel="stylesheet" type="text/css" href="../../assets/css/myCenter/userInfo.css"/>
+   
     export default {
         /*name: "myCenter",*/
         components:{
@@ -29,5 +25,7 @@
 </script>
 
 <style scoped>
+ @import "../../assets/css/myCenter/common.css";
+ @import"../../assets/css/myCenter/userInfo.css";
 
 </style>
